@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Play a local Tetris game with ghost pieces, hold functionality, and keyboard controls.">
+  <title>Tetris | Find the fit</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">A small study in balance</p><h1>Tetris<span>Drop</span></h1><p class="intro">Place the falling shapes, clear clean lines, and use the ghost and hold tools to plan one move ahead.</p></header>
+    <section class="panel" aria-labelledby="game-heading"><div class="panel-heading"><div><p class="section-kicker">Local arcade</p><h2 id="game-heading">Find the fit</h2></div><div class="stats"><span>Score <strong id="score">0</strong></span><span>Level <strong id="level">1</strong></span><span>Lines <strong id="lines">0</strong></span></div></div>
+      <div class="game-layout"><div><canvas id="game" width="300" height="600" role="img" aria-label="Tetris game board"></canvas><p id="status" class="status" role="status" aria-live="polite">Press Start or Space to play.</p></div><aside class="side-panel"><div><h3>Hold</h3><canvas id="hold" width="120" height="90" aria-label="Held piece preview"></canvas></div><div><h3>Next</h3><canvas id="next" width="120" height="90" aria-label="Next piece preview"></canvas></div></aside></div>
+      <div class="actions"><button id="start-button" type="button">Start game</button><button id="pause-button" class="secondary-button" type="button">Pause</button></div><div class="touch-controls" aria-label="Tetromino controls"><button data-action="left" type="button" aria-label="Move left">◀</button><button data-action="rotate" type="button" aria-label="Rotate">↻</button><button data-action="right" type="button" aria-label="Move right">▶</button><button data-action="down" type="button" aria-label="Soft drop">▼</button><button data-action="drop" type="button" aria-label="Hard drop">⤓</button><button data-action="hold" type="button" aria-label="Hold piece">H</button></div><p class="hint">← → move · ↑ rotate · ↓ soft drop · Space hard drop · C hold</p></section>
+  </main>
+  <footer class="site-footer"><p>Best score is kept locally in this browser.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

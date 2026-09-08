@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Play local Minesweeper with difficulty presets and custom board dimensions.">
+  <title>Minesweeper | Read the field</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">A quiet field of clues</p><h1>Mines<span>weeper</span></h1><p class="intro">Reveal the safe squares, mark the hidden mines, and choose a board that fits your mood.</p></header>
+    <section class="panel" aria-labelledby="game-heading"><div class="panel-heading"><div><p class="section-kicker">Local puzzle</p><h2 id="game-heading">Read the field</h2></div><div class="stats"><span>Mines <strong id="mine-count">10</strong></span><span>Time <strong id="time">0s</strong></span></div></div>
+      <div class="settings"><label>Difficulty<select id="difficulty"><option value="beginner">Beginner · 9 × 9</option><option value="intermediate">Intermediate · 12 × 12</option><option value="custom">Custom board</option></select></label><div class="custom-settings" id="custom-settings" hidden><label>Rows<input id="rows" type="number" min="5" max="20" value="10"></label><label>Columns<input id="columns" type="number" min="5" max="20" value="10"></label><label>Mines<input id="mines" type="number" min="1" max="99" value="15"></label></div><button id="new-game" type="button">New game</button></div>
+      <p id="status" class="status" role="status" aria-live="polite">Reveal a square to begin. Your first reveal is safe.</p><div id="board" class="board" role="grid" aria-label="Minesweeper board"></div><p class="hint">Click to reveal · right-click or long-press to flag.</p>
+      <div class="scores"><h3>Best times</h3><dl><div><dt>Beginner</dt><dd id="best-beginner">—</dd></div><div><dt>Intermediate</dt><dd id="best-intermediate">—</dd></div><div><dt>Custom</dt><dd id="best-custom">—</dd></div></dl></div>
+    </section>
+  </main>
+  <footer class="site-footer"><p>Best times are saved locally in this browser.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Check WCAG color contrast with a live foreground and background preview.">
+  <title>ColorContrastChecker | Make readable color choices</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero">
+      <p class="eyebrow">Readable by design</p>
+      <h1>Color<span>Contrast Checker</span></h1>
+      <p class="intro">Compare foreground and background colors, calculate the WCAG contrast ratio, and see which text-size targets your pair meets.</p>
+    </header>
+
+    <section class="panel controls" aria-labelledby="controls-heading">
+      <div class="panel-heading"><div><p class="section-kicker">Color pair</p><h2 id="controls-heading">Choose your contrast</h2></div><span class="badge">WCAG 2.2 formula</span></div>
+      <div class="color-grid">
+        <div class="color-control"><label for="foreground">Foreground</label><div class="color-input"><input id="foreground" type="color" value="#17231e" aria-label="Foreground color picker"><input id="foreground-hex" type="text" value="#17231e" maxlength="7" spellcheck="false" aria-label="Foreground hex value"></div></div>
+        <div class="color-control"><label for="background">Background</label><div class="color-input"><input id="background" type="color" value="#d8f3e5" aria-label="Background color picker"><input id="background-hex" type="text" value="#d8f3e5" maxlength="7" spellcheck="false" aria-label="Background hex value"></div></div>
+      </div>
+      <div class="actions"><button id="swap" class="secondary-button" type="button">Swap colors</button><button id="reset" class="secondary-button" type="button">Reset pair</button></div>
+      <p id="status" class="status" role="status" aria-live="polite">Enter a six-digit hex color to update the check.</p>
+    </section>
+
+    <section class="result-grid" aria-label="Contrast results">
+      <section class="panel ratio-panel" aria-labelledby="ratio-heading"><p class="section-kicker">Contrast ratio</p><h2 id="ratio-heading"><span id="ratio">—</span><small>: 1</small></h2><p id="ratio-note" class="ratio-note">Use two valid colors to calculate a ratio.</p><div class="preview" id="preview"><p class="preview-large">Aa</p><p>Readable interface text</p><small>Large text preview</small></div></section>
+      <section class="panel grades-panel" aria-labelledby="grades-heading"><div class="panel-heading"><div><p class="section-kicker">Guideline targets</p><h2 id="grades-heading">WCAG results</h2></div></div><div class="grade-row"><div><strong>Normal text</strong><small>4.5:1 for AA · 7:1 for AAA</small></div><span id="normal-aa" class="grade">—</span><span id="normal-aaa" class="grade">—</span></div><div class="grade-row"><div><strong>Large text</strong><small>3:1 for AA · 4.5:1 for AAA</small></div><span id="large-aa" class="grade">—</span><span id="large-aaa" class="grade">—</span></div><p class="legend"><span class="pass-dot"></span>Pass <span class="fail-dot"></span>Needs more contrast</p></section>
+    </section>
+  </main>
+  <footer class="site-footer"><p>Calculations happen locally. WCAG ratios are guidance; verify the final design in context.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

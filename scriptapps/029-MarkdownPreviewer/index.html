@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Write Markdown locally, preview the rendered HTML, and download the result.">
+  <title>MarkdownPreviewer | Write, see, share</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">Write with less friction</p><h1>Markdown<span>Previewer</span></h1><p class="intro">Draft Markdown on the left, see a clean preview on the right, and download a standalone HTML file when it is ready.</p></header>
+    <section class="panel" aria-labelledby="preview-heading">
+      <div class="panel-heading"><div><p class="section-kicker">Local writing desk</p><h2 id="preview-heading">Editor and preview</h2></div><span class="summary">Preview updates as you type</span></div>
+      <div class="toolbar"><button type="button" data-insert="**bold text**">Bold</button><button type="button" data-insert="*italic text*">Italic</button><button type="button" data-insert="# Heading">Heading</button><button type="button" data-insert="- List item">List</button><span class="toolbar-spacer"></span><button id="download-button" class="secondary-button" type="button">Download HTML</button><button id="clear-button" class="secondary-button" type="button">Clear</button></div>
+      <div class="workspace"><label for="markdown-input">Markdown<textarea id="markdown-input" spellcheck="false" aria-describedby="editor-help"></textarea></label><div class="preview-wrap"><h3>Preview</h3><article id="preview" class="markdown-body" aria-live="polite"></article></div></div>
+      <p id="editor-help" class="help">Supports headings, emphasis, links, lists, quotes, code, and fenced code blocks.</p><p id="status" class="status" role="status" aria-live="polite">Ready to write.</p><div class="details"><span id="character-count">0 characters</span><span id="word-count">0 words</span></div>
+    </section>
+  </main>
+  <footer class="site-footer"><p>Markdown is parsed locally in this browser.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Inspect Unicode characters, code points, names, and UTF-8 bytes locally.">
+  <title>UnicodeInspector | See what characters mean</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">Every symbol has a story</p><h1>Unicode<span>Inspector</span></h1><p class="intro">Type or paste text to inspect each Unicode code point, its readable name, and the UTF-8 bytes behind it.</p></header>
+    <section class="panel" aria-labelledby="unicode-heading">
+      <div class="panel-heading"><div><p class="section-kicker">Local character utility</p><h2 id="unicode-heading">Inspect characters</h2></div><span class="summary">No text is uploaded</span></div>
+      <label for="unicode-input" class="input-label">Text to inspect<textarea id="unicode-input" spellcheck="false" aria-describedby="help-text">Hello, 世界 👋</textarea></label>
+      <div class="actions"><button id="sample-button" type="button">Use sample</button><button id="copy-button" class="secondary-button" type="button">Copy table</button><button id="clear-button" class="secondary-button" type="button">Clear</button></div>
+      <p id="help-text" class="help">Characters are counted by Unicode code point, so a single emoji may be one row even when it uses two JavaScript code units.</p><p id="status" class="status" role="status" aria-live="polite">Ready to inspect.</p>
+      <div class="summary-row"><span id="character-count">0 code points</span><span id="byte-count">0 UTF-8 bytes</span></div>
+      <div id="table-output" class="table-wrap" aria-live="polite"></div>
+    </section>
+  </main>
+  <footer class="site-footer"><p>Unicode data is inspected entirely in this browser.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

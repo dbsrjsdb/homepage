@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Compare two texts locally and highlight additions, removals, and unchanged lines.">
+  <title>TextDiffViewer | See what changed</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">Compare clearly</p><h1>Text<span>DiffViewer</span></h1><p class="intro">Paste two versions side by side and see additions, removals, and unchanged lines without sending text anywhere.</p></header>
+    <section class="panel" aria-labelledby="diff-heading">
+      <div class="panel-heading"><div><p class="section-kicker">Local comparison</p><h2 id="diff-heading">Source texts</h2></div><span class="summary">Runs entirely in your browser</span></div>
+      <div class="editors"><label for="before-input"><span>Before</span><textarea id="before-input" spellcheck="false" placeholder="Paste the original text here…"></textarea></label><label for="after-input"><span>After</span><textarea id="after-input" spellcheck="false" placeholder="Paste the changed text here…"></textarea></label></div>
+      <div class="actions"><button id="compare-button" type="button">Compare texts</button><button id="swap-button" class="secondary-button" type="button">Swap</button><button id="clear-button" class="secondary-button" type="button">Clear</button><label class="checkbox"><input id="ignore-whitespace" type="checkbox"> Ignore whitespace</label></div>
+      <p id="status" class="status" role="status" aria-live="polite">Add two texts to begin.</p>
+      <div class="stats" aria-live="polite"><span class="removed">− <strong id="removed-count">0</strong> removed</span><span class="added">+ <strong id="added-count">0</strong> added</span><span><strong id="unchanged-count">0</strong> unchanged</span></div>
+      <div id="diff-output" class="diff-output" aria-live="polite"><div class="empty-state">Your highlighted comparison will appear here.</div></div>
+    </section>
+  </main>
+  <footer class="site-footer"><p>Your text stays in this browser tab.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

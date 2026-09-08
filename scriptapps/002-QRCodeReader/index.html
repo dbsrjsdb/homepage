@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Decode QR codes from images locally in your browser." />
+    <title>QRCodeReader | Decode locally</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="hero">
+        <p class="eyebrow">Private in-browser utility</p>
+        <h1>QRCode<span>Reader</span></h1>
+        <p class="intro">Drop an image containing a QR code and decode it locally, without uploading the image.</p>
+      </header>
+
+      <div class="workspace">
+        <section class="panel input-panel" aria-labelledby="input-heading">
+          <h2 id="input-heading">Choose an image</h2>
+          <label class="drop-zone" id="drop-zone" for="file-input">
+            <span class="drop-icon" aria-hidden="true">⌁</span>
+            <span class="drop-title">Drop a QR image here</span>
+            <span class="drop-help">or choose an image from your device</span>
+            <span class="browse-button">Browse image</span>
+            <input id="file-input" type="file" accept="image/*" />
+          </label>
+          <p class="status" id="status" role="status" aria-live="polite">No image selected yet.</p>
+          <button class="secondary-button" id="reset-button" type="button" disabled>Reset</button>
+        </section>
+
+        <section class="panel result-panel" aria-labelledby="result-heading">
+          <div class="panel-heading">
+            <h2 id="result-heading">Result</h2>
+            <span class="privacy-note">Processed locally</span>
+          </div>
+          <div class="preview" id="preview" aria-live="polite">
+            <p class="empty-state">Your image preview will appear here.</p>
+          </div>
+          <div class="decoded-result" id="decoded-result" hidden>
+            <p class="result-label">Decoded text</p>
+            <output id="decoded-text" class="decoded-text"></output>
+            <div class="result-actions">
+              <button id="copy-button" class="secondary-button" type="button">Copy text</button>
+              <a id="open-link" class="secondary-button link-button" target="_blank" rel="noreferrer" hidden>Open link</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer"><p>Your image stays in this browser.</p></footer>
+    <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

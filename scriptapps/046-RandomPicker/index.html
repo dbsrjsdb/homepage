@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pick a fair random name or item from a pasted list locally.">
+  <title>RandomPicker | Let chance decide</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">Fair turns, less friction</p><h1>Random<span>Picker</span></h1><p class="intro">Paste names or items, spin a little bit of suspense, and make a fair random selection without sending your list anywhere.</p></header>
+    <section class="panel" aria-labelledby="picker-heading">
+      <div class="panel-heading"><div><p class="section-kicker">Local randomizer</p><h2 id="picker-heading">Who goes next?</h2></div><span id="item-count" class="summary">0 items</span></div>
+      <label for="items-input" class="input-label">Names or items <span>One per line</span><textarea id="items-input" spellcheck="false">Ada
+Lin
+Mika
+Jo</textarea></label>
+      <div class="options"><label class="check"><input id="remove-picked" type="checkbox"> Remove picked items</label><button id="pick-button" type="button">Pick randomly</button><button id="sample-button" class="secondary-button" type="button">Use sample</button><button id="reset-button" class="secondary-button" type="button">Reset list</button></div>
+      <p id="status" class="status" role="status" aria-live="polite">Ready to pick.</p>
+      <div id="result-card" class="result-card"><span>Selected</span><strong id="result-output">—</strong></div>
+      <div class="history"><div class="subheading"><h3>Pick history</h3><button id="clear-history" class="tiny-button" type="button">Clear history</button></div><ol id="history-list"><li class="empty">Selections will appear here.</li></ol></div>
+    </section>
+  </main>
+  <footer class="site-footer"><p>Selection uses browser cryptographic randomness.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Focus with a local Pomodoro timer and visual progress ring.">
+  <title>PomodoroTimer | Make time visible</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">One block at a time</p><h1>Pomodoro<span>Timer</span></h1><p class="intro">Settle into focused work, take a real break, and let a simple visual rhythm carry you through the next cycle.</p></header>
+    <section class="panel" aria-labelledby="timer-heading">
+      <div class="panel-heading"><div><p class="section-kicker">Focus rhythm</p><h2 id="timer-heading">Your next block</h2></div><span id="cycle-output" class="summary">Cycle 1</span></div>
+      <div class="mode-tabs" role="group" aria-label="Timer mode"><button class="mode active" data-mode="work" type="button" aria-pressed="true">Focus</button><button class="mode" data-mode="break" type="button" aria-pressed="false">Break</button></div>
+      <div class="timer-face"><div id="ring" class="progress-ring" style="--progress:0"><div class="ring-content"><span id="mode-label">Focus time</span><strong id="time-output" role="timer" aria-live="polite">25:00</strong><span id="state-output">Ready when you are</span></div></div></div>
+      <div class="actions"><button id="start-button" type="button">Start focus</button><button id="reset-button" class="secondary-button" type="button">Reset</button><button id="skip-button" class="secondary-button" type="button">Skip block</button></div>
+      <p id="status" class="status" role="status" aria-live="polite">Ready to focus.</p>
+      <div class="settings"><label for="work-minutes">Focus minutes<input id="work-minutes" type="number" min="1" max="120" value="25"></label><label for="break-minutes">Break minutes<input id="break-minutes" type="number" min="1" max="60" value="5"></label><label class="auto"><input id="auto-start" type="checkbox"> Auto-start next block</label></div>
+    </section>
+  </main>
+  <footer class="site-footer"><p>This timer runs locally and keeps no account or activity history.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Practice typing locally with WPM, accuracy, and per-character mistake visualization.">
+  <title>TypingSpeedGame | Find your rhythm</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">A small practice room for words</p><h1>Typing<span>SpeedGame</span></h1><p class="intro">Type the prompt as it appears, watch each character respond, and find a steadier rhythm with every round.</p></header>
+    <section class="panel" aria-labelledby="game-heading"><div class="panel-heading"><div><p class="section-kicker">Local typing test</p><h2 id="game-heading">Find your rhythm</h2></div><div class="stats"><span>WPM <strong id="wpm">0</strong></span><span>Accuracy <strong id="accuracy">100%</strong></span><span>Time <strong id="time">0s</strong></span></div></div>
+      <div id="prompt" class="prompt" aria-label="Typing prompt"></div><label class="input-label" for="typing-input">Your typing <span>Errors are marked below</span></label><textarea id="typing-input" rows="4" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" disabled placeholder="Press Start to begin…"></textarea><div id="feedback" class="feedback" aria-live="polite"></div>
+      <div class="actions"><button id="start-button" type="button">Start test</button><button id="reset-button" class="secondary-button" type="button">New prompt</button></div><p id="status" class="status" role="status" aria-live="polite">Type the prompt as accurately as you can.</p>
+      <div class="history"><div class="subheading"><h3>Recent results</h3><span id="result-count">0 tests</span></div><ol id="history-list"><li class="empty">Finish a test to see your results.</li></ol></div>
+    </section>
+  </main>
+  <footer class="site-footer"><p>Results stay in this browser.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

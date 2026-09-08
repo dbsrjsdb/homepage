@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Crop images locally in your browser with flexible aspect-ratio presets." />
+    <title>ImageCropper | Crop locally</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="hero">
+        <p class="eyebrow">Private in-browser utility</p>
+        <h1>Image<span>Cropper</span></h1>
+        <p class="intro">Drag a crop box over an image, choose an aspect ratio, and download the selected area.</p>
+      </header>
+
+      <div class="workspace">
+        <section class="panel input-panel" aria-labelledby="input-heading">
+          <h2 id="input-heading">Choose an image</h2>
+          <label class="drop-zone" id="drop-zone" for="file-input">
+            <span class="drop-icon" aria-hidden="true">□</span>
+            <span class="drop-title">Drop an image here</span>
+            <span class="drop-help">or choose an image from your device</span>
+            <span class="browse-button">Browse image</span>
+            <input id="file-input" type="file" accept="image/*" />
+          </label>
+          <p class="status" id="status" role="status" aria-live="polite">No image selected yet.</p>
+          <button class="secondary-button" id="reset-button" type="button" disabled>Reset</button>
+        </section>
+
+        <section class="panel controls-panel" aria-labelledby="controls-heading">
+          <h2 id="controls-heading">Crop settings</h2>
+          <label for="aspect-input">Aspect ratio</label>
+          <select id="aspect-input" disabled>
+            <option value="free">Free crop</option>
+            <option value="1">Square · 1:1</option>
+            <option value="1.3333333333">Landscape · 4:3</option>
+            <option value="0.75">Portrait · 3:4</option>
+            <option value="1.7777777778">Widescreen · 16:9</option>
+            <option value="0.5625">Portrait · 9:16</option>
+          </select>
+          <p class="control-help">Drag inside the frame to move it. Drag a corner to resize it.</p>
+          <label for="format-input">Download format</label>
+          <select id="format-input" disabled>
+            <option value="image/png">PNG</option>
+            <option value="image/jpeg">JPEG</option>
+            <option value="image/webp">WebP</option>
+          </select>
+          <button id="crop-button" type="button" disabled>Crop and download</button>
+        </section>
+
+        <section class="panel editor-panel" aria-labelledby="editor-heading">
+          <div class="panel-heading">
+            <h2 id="editor-heading">Crop area</h2>
+            <span id="crop-summary" class="crop-summary">No image loaded</span>
+          </div>
+          <div id="stage" class="stage" aria-label="Image crop editor">
+            <p class="empty-state">Your image and crop box will appear here.</p>
+          </div>
+        </section>
+
+        <section class="panel result-panel" aria-labelledby="result-heading">
+          <div class="panel-heading">
+            <h2 id="result-heading">Result preview</h2>
+            <span id="result-summary" class="crop-summary">Nothing cropped yet</span>
+          </div>
+          <div id="result-preview" class="result-preview" aria-live="polite" aria-label="Cropped image preview">
+            <p class="empty-state">Your cropped image will appear here.</p>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer"><p>Your image stays in this browser.</p></footer>
+    <script src="script.js"></script>
+  </body>
+</html>

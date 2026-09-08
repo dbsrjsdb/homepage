@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore flocking behavior with interactive boids alignment, cohesion, and separation controls.">
+  <title>BoidsSimulator | Watch a flock find its shape</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">Many minds, one motion</p><h1>Boids<span>Simulator</span></h1><p class="intro">Tune the three simple rules behind flocking—alignment, cohesion, and separation—and see a group find its shape in real time.</p></header>
+    <section class="workspace">
+      <section class="panel controls" aria-labelledby="controls-heading"><div class="panel-heading"><div><p class="section-kicker">Flock rules</p><h2 id="controls-heading">Tune the instinct</h2></div><span class="badge">Live simulation</span></div>
+        <label class="field">Alignment <output id="alignment-value">45%</output><input id="alignment" type="range" min="0" max="100" value="45"></label>
+        <label class="field">Cohesion <output id="cohesion-value">35%</output><input id="cohesion" type="range" min="0" max="100" value="35"></label>
+        <label class="field">Separation <output id="separation-value">70%</output><input id="separation" type="range" min="0" max="100" value="70"></label>
+        <label class="field">Flock size <output id="size-value">54 birds</output><input id="size" type="range" min="20" max="100" value="54"></label>
+        <div class="button-row"><button id="reset" type="button">Reset flock</button><button id="pause" class="secondary-button" type="button">Pause</button></div>
+        <p id="status" class="status" role="status" aria-live="polite">Move your pointer near the flock to attract it.</p><div class="legend"><span class="legend-dot"></span><span>Pointer attraction is active</span></div>
+      </section>
+      <section class="panel canvas-panel" aria-labelledby="canvas-heading"><div class="panel-heading"><div><p class="section-kicker">Live flock</p><h2 id="canvas-heading">A shared direction</h2></div><span id="count" class="badge">54 birds</span></div><div class="canvas-wrap"><canvas id="canvas" width="820" height="560" tabindex="0" aria-label="Interactive flocking simulation"></canvas><div class="canvas-label">Move · observe · adjust</div></div></section>
+    </section>
+  </main>
+  <footer class="site-footer"><p>Boids are calculated locally with simple neighborhood rules; no data leaves the page.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

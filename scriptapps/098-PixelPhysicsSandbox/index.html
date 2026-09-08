@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Paint falling sand, water, fire, and walls in a local pixel physics grid.">
+  <title>PixelPhysicsSandbox | Paint a tiny world</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">Matter with nowhere else to go</p><h1>Pixel<span>Physics Sandbox</span></h1><p class="intro">Paint sand, water, fire, and walls onto a tiny cellular world, then watch each material follow its own simple rules.</p></header>
+    <section class="panel controls" aria-labelledby="controls-heading"><div class="panel-heading"><div><p class="section-kicker">Material palette</p><h2 id="controls-heading">Choose what to paint</h2></div><span class="badge">Cellular physics</span></div><div class="control-row"><div class="materials" role="group" aria-label="Material selection"><button class="material active" data-material="sand" type="button">Sand</button><button class="material" data-material="water" type="button">Water</button><button class="material" data-material="fire" type="button">Fire</button><button class="material" data-material="wall" type="button">Wall</button><button class="material eraser" data-material="empty" type="button">Erase</button></div><label>Brush size <output id="brush-value">3 px</output><input id="brush" type="range" min="1" max="8" value="3"></label><button id="pause" class="secondary-button" type="button">Pause</button><button id="clear" class="secondary-button" type="button">Clear world</button></div><p id="status" class="status" role="status" aria-live="polite">Painting sand. Drag across the world to begin.</p></section>
+    <section class="panel world-panel" aria-labelledby="world-heading"><div class="panel-heading"><div><p class="section-kicker">Cellular world</p><h2 id="world-heading">Make matter move</h2></div><span id="material-label" class="badge">Sand selected</span></div><div class="canvas-wrap"><canvas id="canvas" width="840" height="560" tabindex="0" aria-label="Pixel physics world. Drag to paint the selected material."></canvas><div class="canvas-label">Drag to paint</div></div><div class="legend"><span class="legend-item"><i class="sand"></i>Sand falls</span><span class="legend-item"><i class="water"></i>Water flows</span><span class="legend-item"><i class="fire"></i>Fire rises</span><span class="legend-item"><i class="wall"></i>Wall holds</span></div></section>
+  </main>
+  <footer class="site-footer"><p>All materials are simulated locally on a small cellular grid.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

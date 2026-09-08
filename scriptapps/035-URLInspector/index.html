@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Break URLs into protocol, host, path, query parameters, and fragments locally.">
+  <title>URLInspector | See every part</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">Every part has a purpose</p><h1>URL<span>Inspector</span></h1><p class="intro">Paste a URL to see its protocol, host, path, query parameters, and fragment laid out clearly.</p></header>
+    <section class="panel" aria-labelledby="url-heading">
+      <div class="panel-heading"><div><p class="section-kicker">Local URL utility</p><h2 id="url-heading">Inspect a URL</h2></div><span class="summary">Nothing leaves this tab</span></div>
+      <label for="url-input" class="url-label">URL<input id="url-input" type="url" spellcheck="false" autocomplete="off" placeholder="https://example.com/search?q=hello#results"></label>
+      <div class="actions"><button id="inspect-button" type="button">Inspect URL</button><button id="sample-button" class="secondary-button" type="button">Use sample</button><button id="copy-button" class="secondary-button" type="button">Copy URL</button><button id="clear-button" class="secondary-button" type="button">Clear</button></div>
+      <p id="status" class="status" role="status" aria-live="polite">Enter a URL to begin.</p>
+      <div id="results" class="results" hidden><div class="component-grid"><div class="component"><span>Protocol</span><strong id="protocol-output">—</strong></div><div class="component"><span>Host</span><strong id="host-output">—</strong></div><div class="component"><span>Port</span><strong id="port-output">—</strong></div><div class="component"><span>Path</span><strong id="path-output">—</strong></div><div class="component"><span>Username</span><strong id="username-output">—</strong></div><div class="component"><span>Fragment</span><strong id="fragment-output">—</strong></div></div><div class="query"><div class="subheading"><h3>Query parameters</h3><span id="query-count">0 parameters</span></div><div id="query-output" class="query-table">No query parameters.</div></div><div class="normalized"><span>Normalized URL</span><output id="normalized-output" aria-live="polite">—</output></div></div>
+    </section>
+  </main>
+  <footer class="site-footer"><p>URL parsing uses the browser's native URL API.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Play a local Lights Out puzzle and find a minimum-move solution.">
+  <title>LightsOut | Quiet the grid</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">A small puzzle in cause and effect</p><h1>Lights<span>Out</span></h1><p class="intro">Turn off every light, knowing each press also changes the cells around it. Find a clean solution or ask the grid for its minimum route.</p></header>
+    <section class="panel" aria-labelledby="game-heading"><div class="panel-heading"><div><p class="section-kicker">Local logic puzzle</p><h2 id="game-heading">Quiet the grid</h2></div><div class="stats"><span>Moves <strong id="moves">0</strong></span><span>Lights <strong id="lights">0</strong></span></div></div>
+      <div class="settings"><label>Grid size<select id="size"><option value="3">3 × 3 · gentle</option><option value="4">4 × 4 · thoughtful</option><option value="5" selected>5 × 5 · classic</option></select></label><button id="new-game" type="button">New puzzle</button></div><p id="status" class="status" role="status" aria-live="polite">Turn off every light.</p><div id="board" class="board" role="grid" aria-label="Lights Out puzzle board"></div>
+      <div class="actions"><button id="hint-button" class="secondary-button" type="button">Show hint</button><button id="solve-button" type="button">Solve optimally</button></div><p class="hint">Pressing a tile toggles it and its up, down, left, and right neighbors.</p><div class="best"><span>Best moves</span><strong id="best">—</strong></div>
+    </section>
+  </main>
+  <footer class="site-footer"><p>Best results are saved locally in this browser.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

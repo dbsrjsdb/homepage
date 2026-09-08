@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Compress JPEG and WebP images locally with a quality and file-size comparison." />
+    <title>ImageCompressor | Compress locally</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="hero">
+        <p class="eyebrow">Private in-browser utility</p>
+        <h1>Image<span>Compressor</span></h1>
+        <p class="intro">Adjust image quality locally, compare the file size, and download a lighter JPEG or WebP.</p>
+      </header>
+
+      <div class="workspace">
+        <section class="panel input-panel" aria-labelledby="input-heading">
+          <h2 id="input-heading">Choose an image</h2>
+          <label class="drop-zone" id="drop-zone" for="file-input">
+            <span class="drop-icon" aria-hidden="true">↓</span>
+            <span class="drop-title">Drop an image here</span>
+            <span class="drop-help">or choose an image from your device</span>
+            <span class="browse-button">Browse image</span>
+            <input id="file-input" type="file" accept="image/*" />
+          </label>
+          <p class="status" id="status" role="status" aria-live="polite">No image selected yet.</p>
+          <button class="secondary-button" id="reset-button" type="button" disabled>Reset</button>
+        </section>
+
+        <section class="panel controls-panel" aria-labelledby="controls-heading">
+          <h2 id="controls-heading">Compression settings</h2>
+          <label for="format-input">Output format</label>
+          <select id="format-input" disabled>
+            <option value="image/jpeg">JPEG</option>
+            <option value="image/webp">WebP</option>
+          </select>
+          <div class="quality-heading">
+            <label for="quality-input">Quality</label>
+            <output id="quality-value" for="quality-input">80%</output>
+          </div>
+          <input id="quality-input" type="range" min="10" max="100" step="1" value="80" disabled />
+          <p class="control-help">Lower quality creates a smaller file. The original image is never changed.</p>
+          <button id="download-button" type="button" disabled>Download compressed image</button>
+        </section>
+
+        <section class="panel comparison-panel" aria-labelledby="comparison-heading">
+          <div class="panel-heading">
+            <h2 id="comparison-heading">Comparison</h2>
+            <span id="dimensions" class="summary-text">No image loaded</span>
+          </div>
+          <div class="comparison-grid">
+            <div class="preview-card">
+              <p class="preview-label">Original</p>
+              <div class="preview" id="original-preview"><p class="empty-state">Original preview</p></div>
+              <p id="original-size" class="file-size">—</p>
+            </div>
+            <div class="preview-card">
+              <p class="preview-label">Compressed</p>
+              <div class="preview" id="compressed-preview" aria-live="polite" aria-label="Compressed image preview"><p class="empty-state">Compressed preview</p></div>
+              <p id="compressed-size" class="file-size">—</p>
+            </div>
+          </div>
+          <p id="savings" class="savings" role="status" aria-live="polite"></p>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer"><p>Your image stays in this browser.</p></footer>
+    <script src="script.js"></script>
+  </body>
+</html>

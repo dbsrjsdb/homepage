@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Inspect cron expressions and preview upcoming local occurrences in your browser.">
+  <title>CronExpressionVisualizer | Make schedules legible</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">Time, decoded</p><h1>Cron<span>Visualizer</span></h1><p class="intro">Enter a five-field cron expression, understand what it means, and preview the next local occurrences without a server.</p></header>
+    <section class="panel" aria-labelledby="cron-heading">
+      <div class="panel-heading"><div><p class="section-kicker">Local schedule builder</p><h2 id="cron-heading">Read a cron expression</h2></div><span id="timezone-label" class="summary"></span></div>
+      <label for="cron-input" class="expression-label">Cron expression<input id="cron-input" value="*/15 * * * *" spellcheck="false" autocomplete="off"></label>
+      <p class="hint">Fields: minute · hour · day of month · month · day of week</p>
+      <div class="presets"><button type="button" data-cron="*/15 * * * *">Every 15 min</button><button type="button" data-cron="0 9 * * 1-5">Weekdays at 09:00</button><button type="button" data-cron="30 18 * * *">Daily at 18:30</button></div>
+      <div class="actions"><button id="visualize-button" type="button">Visualize</button><button id="now-button" class="secondary-button" type="button">From now</button><button id="clear-button" class="secondary-button" type="button">Clear</button></div>
+      <p id="status" class="status" role="status" aria-live="polite">Ready to visualize.</p>
+      <div class="summary-card"><span>Meaning</span><strong id="description-output">—</strong></div>
+      <div class="occurrences"><div class="subheading"><h3>Upcoming occurrences</h3><span id="count-output">0 results</span></div><ol id="occurrence-list" aria-live="polite"><li class="empty">Visualize an expression to see upcoming times.</li></ol></div>
+    </section>
+  </main>
+  <footer class="site-footer"><p>Occurrences use your browser's local time zone.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

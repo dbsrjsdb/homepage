@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Add choices and spin a colorful decision wheel locally.">
+  <title>DecisionWheel | Let chance choose</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">A little less deliberation</p><h1>Decision<span>Wheel</span></h1><p class="intro">Add a few choices, give the wheel a spin, and let a random answer break the tie.</p></header>
+    <section class="panel" aria-labelledby="wheel-heading">
+      <div class="panel-heading"><div><p class="section-kicker">Local randomizer</p><h2 id="wheel-heading">What should you choose?</h2></div><span id="choice-count" class="summary">0 choices</span></div>
+      <div class="workspace"><div class="choice-editor"><label for="choices-input">Choices <span>One per line</span><textarea id="choices-input" spellcheck="false">Pizza
+Tacos
+Sushi
+Salad</textarea></label><div class="actions"><button id="spin-button" type="button">Spin the wheel</button><button id="sample-button" class="secondary-button" type="button">Use sample</button><button id="clear-button" class="secondary-button" type="button">Clear</button></div></div><div class="wheel-area"><div class="pointer" aria-hidden="true"></div><div id="wheel" class="wheel" role="img" aria-label="Decision wheel"></div><div class="wheel-center" aria-hidden="true">?</div></div></div>
+      <p id="status" class="status" role="status" aria-live="polite">Ready to spin.</p><div class="result"><span>Selected choice</span><strong id="result-output">—</strong></div>
+    </section>
+  </main>
+  <footer class="site-footer"><p>Choices are processed locally and never uploaded.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

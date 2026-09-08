@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Build a 16-step drum and synth pattern with the Web Audio API.">
+  <title>MusicSequencer | Make a small loop</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">Four voices, sixteen moments</p><h1>Music<span>Sequencer</span></h1><p class="intro">Tap in a compact drum and bass pattern, choose a tempo, and let the browser turn your grid into a loop.</p></header>
+    <section class="panel transport" aria-labelledby="transport-heading"><div><p class="section-kicker">Pattern controls</p><h2 id="transport-heading">Find the pulse</h2></div><div class="transport-controls"><button id="play" type="button">Play pattern</button><button id="stop" class="secondary-button" type="button">Stop</button><label>BPM <output id="bpm-value">112</output><input id="bpm" type="range" min="70" max="180" value="112"></label><button id="random" class="secondary-button" type="button">Randomize</button><button id="clear" class="secondary-button" type="button">Clear</button></div><p id="status" class="status" role="status" aria-live="polite">Tap the cells to build a pattern. Audio starts only after Play.</p></section>
+    <section class="panel sequencer" aria-labelledby="grid-heading"><div class="panel-heading"><div><p class="section-kicker">Step grid</p><h2 id="grid-heading">16-step pattern</h2></div><span class="badge">Web Audio</span></div><div class="grid-wrap"><div class="step-numbers" aria-hidden="true"><span></span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span></div><div id="track-grid" class="track-grid"></div></div><p class="grid-help">Kick and snare shape the beat; hat adds movement; bass follows a low note.</p></section>
+  </main>
+  <footer class="site-footer"><p>Sound is synthesized locally. No recordings or pattern data leave this page.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

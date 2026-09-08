@@ -1,0 +1,702 @@
+[
+  {
+    "title": "Text to QR Code",
+    "description": "Convert text into a downloadable QR code in your browser.",
+    "category": "Images & design",
+    "slug": "001-stringtoqr",
+    "source": "001-StringToQR"
+  },
+  {
+    "title": "QR Code Reader",
+    "description": "Decode QR codes from local images without uploading them.",
+    "category": "Images & design",
+    "slug": "002-qrcodereader",
+    "source": "002-QRCodeReader"
+  },
+  {
+    "title": "Image Resizer",
+    "description": "Resize images by dimensions or percentage and download the result.",
+    "category": "Images & design",
+    "slug": "003-imageresizer",
+    "source": "003-ImageResizer"
+  },
+  {
+    "title": "Image Cropper",
+    "description": "Crop images with movable frames and aspect-ratio presets.",
+    "category": "Images & design",
+    "slug": "004-imagecropper",
+    "source": "004-ImageCropper"
+  },
+  {
+    "title": "Image Compressor",
+    "description": "Adjust JPEG or WebP quality and compare file sizes locally.",
+    "category": "Images & design",
+    "slug": "005-imagecompressor",
+    "source": "005-ImageCompressor"
+  },
+  {
+    "title": "Image Format Converter",
+    "description": "Convert images between PNG, JPEG, and WebP formats.",
+    "category": "Images & design",
+    "slug": "006-imageformatconverter",
+    "source": "006-ImageFormatConverter"
+  },
+  {
+    "title": "Pixel Art Editor",
+    "description": "Create and export small pixel-art illustrations in the browser.",
+    "category": "Images & design",
+    "slug": "007-pixelarteditor",
+    "source": "007-PixelArtEditor"
+  },
+  {
+    "title": "ASCII Art Generator",
+    "description": "Turn images into text-based ASCII art with adjustable output.",
+    "category": "Images & design",
+    "slug": "008-asciiartgenerator",
+    "source": "008-ASCIIArtGenerator"
+  },
+  {
+    "title": "Color Palette Extractor",
+    "description": "Extract a color palette from an image without uploading it.",
+    "category": "Images & design",
+    "slug": "009-colorpaletteextractor",
+    "source": "009-ColorPaletteExtractor"
+  },
+  {
+    "title": "Gradient Studio",
+    "description": "Design CSS gradients and copy the generated styles.",
+    "category": "Images & design",
+    "slug": "010-gradientstudio",
+    "source": "010-GradientStudio"
+  },
+  {
+    "title": "SVG Pattern Generator",
+    "description": "Generate repeating SVG patterns for backgrounds and artwork.",
+    "category": "Images & design",
+    "slug": "011-svgpatterngenerator",
+    "source": "011-SVGPatternGenerator"
+  },
+  {
+    "title": "CSS Blob Generator",
+    "description": "Create organic CSS blob shapes and export their styles.",
+    "category": "Images & design",
+    "slug": "012-cssblobgenerator",
+    "source": "012-CSSBlobGenerator"
+  },
+  {
+    "title": "Favicon Generator",
+    "description": "Create favicon files from text, emoji, or an image.",
+    "category": "Images & design",
+    "slug": "013-favicongenerator",
+    "source": "013-FaviconGenerator"
+  },
+  {
+    "title": "Photo Mosaic Generator",
+    "description": "Build a colorful mosaic from an image in your browser.",
+    "category": "Images & design",
+    "slug": "014-photomosaicgenerator",
+    "source": "014-PhotoMosaicGenerator"
+  },
+  {
+    "title": "Duotone Image Maker",
+    "description": "Apply a two-color duotone treatment to an image.",
+    "category": "Images & design",
+    "slug": "015-duotoneimagemaker",
+    "source": "015-DuotoneImageMaker"
+  },
+  {
+    "title": "Poster Maker",
+    "description": "Compose a simple poster with text, color, and image controls.",
+    "category": "Images & design",
+    "slug": "016-postermaker",
+    "source": "016-PosterMaker"
+  },
+  {
+    "title": "Sprite Sheet Cutter",
+    "description": "Split a sprite sheet into individual downloadable tiles.",
+    "category": "Images & design",
+    "slug": "017-spritesheetcutter",
+    "source": "017-SpriteSheetCutter"
+  },
+  {
+    "title": "Image Color Replacer",
+    "description": "Replace selected colors in an image with local canvas processing.",
+    "category": "Images & design",
+    "slug": "018-imagecolorreplacer",
+    "source": "018-ImageColorReplacer"
+  },
+  {
+    "title": "CSS Shadow Designer",
+    "description": "Design layered CSS box shadows and copy the result.",
+    "category": "Images & design",
+    "slug": "019-cssshadowdesigner",
+    "source": "019-CSSShadowDesigner"
+  },
+  {
+    "title": "Glassmorphism Designer",
+    "description": "Experiment with translucent glassmorphism panel styles.",
+    "category": "Images & design",
+    "slug": "020-glassmorphismdesigner",
+    "source": "020-GlassmorphismDesigner"
+  },
+  {
+    "title": "Unit Converter",
+    "description": "Convert common length, weight, temperature, and data units.",
+    "category": "Utilities",
+    "slug": "021-unitconverter",
+    "source": "021-UnitConverter"
+  },
+  {
+    "title": "Unix Timestamp Explorer",
+    "description": "Convert Unix timestamps to readable dates and back.",
+    "category": "Utilities",
+    "slug": "022-unixtimestampexplorer",
+    "source": "022-UnixTimestampExplorer"
+  },
+  {
+    "title": "Timezone Meeting Finder",
+    "description": "Compare local times to find a workable meeting window.",
+    "category": "Utilities",
+    "slug": "023-timezonemeetingfinder",
+    "source": "023-TimezoneMeetingFinder"
+  },
+  {
+    "title": "Password Generator",
+    "description": "Generate strong random passwords with configurable options.",
+    "category": "Utilities",
+    "slug": "024-passwordgenerator",
+    "source": "024-PasswordGenerator"
+  },
+  {
+    "title": "Passphrase Generator",
+    "description": "Create memorable random passphrases from word lists.",
+    "category": "Utilities",
+    "slug": "025-passphrasegenerator",
+    "source": "025-PassphraseGenerator"
+  },
+  {
+    "title": "Text Diff Viewer",
+    "description": "Compare two text snippets and inspect their differences.",
+    "category": "Text & data",
+    "slug": "026-textdiffviewer",
+    "source": "026-TextDiffViewer"
+  },
+  {
+    "title": "Text Transformer",
+    "description": "Apply common case, whitespace, and text transformations.",
+    "category": "Text & data",
+    "slug": "027-texttransformer",
+    "source": "027-TextTransformer"
+  },
+  {
+    "title": "Regex Playground",
+    "description": "Test regular expressions against sample text with live matches.",
+    "category": "Text & data",
+    "slug": "028-regexplayground",
+    "source": "028-RegexPlayground"
+  },
+  {
+    "title": "Markdown Previewer",
+    "description": "Write Markdown and preview the rendered result instantly.",
+    "category": "Text & data",
+    "slug": "029-markdownpreviewer",
+    "source": "029-MarkdownPreviewer"
+  },
+  {
+    "title": "JSON Formatter & Explorer",
+    "description": "Validate, format, minify, and explore JSON structures.",
+    "category": "Text & data",
+    "slug": "030-jsonformatterandexplorer",
+    "source": "030-JSONFormatterAndExplorer"
+  },
+  {
+    "title": "CSV Explorer",
+    "description": "Load CSV data, sort and filter rows, and inspect statistics.",
+    "category": "Text & data",
+    "slug": "031-csvexplorer",
+    "source": "031-CSVExplorer"
+  },
+  {
+    "title": "Cron Expression Visualizer",
+    "description": "Visualize cron schedules and upcoming local occurrences.",
+    "category": "Developer tools",
+    "slug": "032-cronexpressionvisualizer",
+    "source": "032-CronExpressionVisualizer"
+  },
+  {
+    "title": "File Hash Calculator",
+    "description": "Calculate SHA-256 or SHA-512 file hashes locally.",
+    "category": "Developer tools",
+    "slug": "033-filehashcalculator",
+    "source": "033-FileHashCalculator"
+  },
+  {
+    "title": "Base64 Workbench",
+    "description": "Encode and decode text or files using Base64 in your browser.",
+    "category": "Developer tools",
+    "slug": "034-base64workbench",
+    "source": "034-Base64Workbench"
+  },
+  {
+    "title": "URL Inspector",
+    "description": "Break a URL into its protocol, host, path, query, and fragment.",
+    "category": "Developer tools",
+    "slug": "035-urlinspector",
+    "source": "035-URLInspector"
+  },
+  {
+    "title": "Unicode Inspector",
+    "description": "Inspect Unicode characters, code points, and their browser representations.",
+    "category": "Text & data",
+    "slug": "036-unicodeinspector",
+    "source": "036-UnicodeInspector"
+  },
+  {
+    "title": "Screen Ruler",
+    "description": "Measure distances and inspect coordinates directly on your screen.",
+    "category": "Utilities",
+    "slug": "037-screenruler",
+    "source": "037-ScreenRuler"
+  },
+  {
+    "title": "Aspect Ratio Calculator",
+    "description": "Calculate matching dimensions for common aspect ratios.",
+    "category": "Utilities",
+    "slug": "038-aspectratiocalculator",
+    "source": "038-AspectRatioCalculator"
+  },
+  {
+    "title": "Pomodoro Timer",
+    "description": "Work in focused intervals with a simple browser timer.",
+    "category": "Planning & focus",
+    "slug": "039-pomodorotimer",
+    "source": "039-PomodoroTimer"
+  },
+  {
+    "title": "Kanban Board",
+    "description": "Organize tasks across a lightweight local kanban board.",
+    "category": "Planning & focus",
+    "slug": "040-kanbanboard",
+    "source": "040-KanbanBoard"
+  },
+  {
+    "title": "Daily Habit Grid",
+    "description": "Track recurring habits on a compact visual calendar.",
+    "category": "Planning & focus",
+    "slug": "041-dailyhabitgrid",
+    "source": "041-DailyHabitGrid"
+  },
+  {
+    "title": "Decision Wheel",
+    "description": "Make a quick random choice with a customizable decision wheel.",
+    "category": "Planning & focus",
+    "slug": "042-decisionwheel",
+    "source": "042-DecisionWheel"
+  },
+  {
+    "title": "Priority Matrix",
+    "description": "Sort tasks by urgency and importance on a four-quadrant matrix.",
+    "category": "Planning & focus",
+    "slug": "043-prioritymatrix",
+    "source": "043-PriorityMatrix"
+  },
+  {
+    "title": "Timeboxing Planner",
+    "description": "Plan a day by assigning work to clear time boxes.",
+    "category": "Planning & focus",
+    "slug": "044-timeboxingplanner",
+    "source": "044-TimeboxingPlanner"
+  },
+  {
+    "title": "Countdown Dashboard",
+    "description": "Keep multiple event countdowns visible in one dashboard.",
+    "category": "Utilities",
+    "slug": "045-countdowndashboard",
+    "source": "045-CountdownDashboard"
+  },
+  {
+    "title": "Random Picker",
+    "description": "Choose a random item from a list with one click.",
+    "category": "Utilities",
+    "slug": "046-randompicker",
+    "source": "046-RandomPicker"
+  },
+  {
+    "title": "Focus Ambient Mixer",
+    "description": "Mix gentle ambient sounds for a calmer focus session.",
+    "category": "Audio & simulation",
+    "slug": "047-focusambientmixer",
+    "source": "047-FocusAmbientMixer"
+  },
+  {
+    "title": "Clipboard Scratchpad",
+    "description": "Keep temporary notes and snippets close at hand in the browser.",
+    "category": "Text & data",
+    "slug": "048-clipboardscratchpad",
+    "source": "048-ClipboardScratchpad"
+  },
+  {
+    "title": "Reading Time Analyzer",
+    "description": "Estimate reading time and inspect basic text statistics.",
+    "category": "Text & data",
+    "slug": "049-readingtimeanalyzer",
+    "source": "049-ReadingTimeAnalyzer"
+  },
+  {
+    "title": "Expense Splitter",
+    "description": "Split shared expenses and calculate each person’s share.",
+    "category": "Utilities",
+    "slug": "050-expensesplitter",
+    "source": "050-ExpenseSplitter"
+  },
+  {
+    "title": "Snake",
+    "description": "Play the classic grid-based Snake game.",
+    "category": "Games",
+    "slug": "051-snake",
+    "source": "051-Snake"
+  },
+  {
+    "title": "2048",
+    "description": "Combine numbered tiles to reach the 2048 tile.",
+    "category": "Games",
+    "slug": "052-2048",
+    "source": "052-2048"
+  },
+  {
+    "title": "Minesweeper",
+    "description": "Clear a minefield using logic and careful reveals.",
+    "category": "Games",
+    "slug": "053-minesweeper",
+    "source": "053-Minesweeper"
+  },
+  {
+    "title": "Breakout",
+    "description": "Bounce a paddle and break every brick on the screen.",
+    "category": "Games",
+    "slug": "054-breakout",
+    "source": "054-Breakout"
+  },
+  {
+    "title": "Asteroids",
+    "description": "Pilot a ship through an arcade field of drifting asteroids.",
+    "category": "Games",
+    "slug": "055-asteroids",
+    "source": "055-Asteroids"
+  },
+  {
+    "title": "Tetris",
+    "description": "Arrange falling blocks and clear complete lines.",
+    "category": "Games",
+    "slug": "056-tetris",
+    "source": "056-Tetris"
+  },
+  {
+    "title": "Memory Cards",
+    "description": "Match hidden pairs in a compact memory challenge.",
+    "category": "Games",
+    "slug": "057-memorycards",
+    "source": "057-MemoryCards"
+  },
+  {
+    "title": "Reaction-Time Tester",
+    "description": "Measure how quickly you respond to a visual cue.",
+    "category": "Games",
+    "slug": "058-reactiontimetester",
+    "source": "058-ReactionTimeTester"
+  },
+  {
+    "title": "Typing Speed Game",
+    "description": "Test typing speed and accuracy against changing prompts.",
+    "category": "Games",
+    "slug": "059-typingspeedgame",
+    "source": "059-TypingSpeedGame"
+  },
+  {
+    "title": "Aim Trainer",
+    "description": "Practice fast and accurate pointer targeting.",
+    "category": "Games",
+    "slug": "060-aimtrainer",
+    "source": "060-AimTrainer"
+  },
+  {
+    "title": "Lights Out",
+    "description": "Turn off every light by solving the tile puzzle.",
+    "category": "Games",
+    "slug": "061-lightsout",
+    "source": "061-LightsOut"
+  },
+  {
+    "title": "Maze Generator + Solver",
+    "description": "Generate mazes and watch paths get solved.",
+    "category": "Games",
+    "slug": "062-mazegeneratorsolver",
+    "source": "062-MazeGeneratorSolver"
+  },
+  {
+    "title": "Conway's Game of Life",
+    "description": "Explore emergent patterns in Conway’s cellular automaton.",
+    "category": "Games",
+    "slug": "063-conwaysgameoflife",
+    "source": "063-ConwaysGameOfLife"
+  },
+  {
+    "title": "Infinite Minesweeper",
+    "description": "Explore an expanding minesweeper field without fixed edges.",
+    "category": "Games",
+    "slug": "064-infiniteminesweeper",
+    "source": "064-InfiniteMinesweeper"
+  },
+  {
+    "title": "One-Line Puzzle",
+    "description": "Solve compact puzzles by drawing one continuous line.",
+    "category": "Games",
+    "slug": "065-onelinepuzzle",
+    "source": "065-OneLinePuzzle"
+  },
+  {
+    "title": "Procedural Dungeon Explorer",
+    "description": "Explore a dungeon assembled differently each run.",
+    "category": "Games",
+    "slug": "066-proceduraldungeonexplorer",
+    "source": "066-ProceduralDungeonExplorer"
+  },
+  {
+    "title": "JWT Inspector",
+    "description": "Decode and inspect JSON Web Token headers and payloads locally.",
+    "category": "Developer tools",
+    "slug": "067-jwtinspector",
+    "source": "067-JWTInspector"
+  },
+  {
+    "title": "HTTP Status Explorer",
+    "description": "Browse HTTP status codes and their common meanings.",
+    "category": "Developer tools",
+    "slug": "068-httpstatusexplorer",
+    "source": "068-HTTPStatusExplorer"
+  },
+  {
+    "title": "CSS Easing Playground",
+    "description": "Tune CSS easing curves and preview their motion.",
+    "category": "Developer tools",
+    "slug": "069-csseasingplayground",
+    "source": "069-CSSEasingPlayground"
+  },
+  {
+    "title": "Flexbox Playground",
+    "description": "Learn and experiment with CSS Flexbox alignment rules.",
+    "category": "Developer tools",
+    "slug": "070-flexboxplayground",
+    "source": "070-FlexboxPlayground"
+  },
+  {
+    "title": "Grid Playground",
+    "description": "Explore CSS Grid tracks, gaps, and placement interactively.",
+    "category": "Developer tools",
+    "slug": "071-gridplayground",
+    "source": "071-GridPlayground"
+  },
+  {
+    "title": "SQL Formatter",
+    "description": "Format SQL queries for easier reading and sharing.",
+    "category": "Developer tools",
+    "slug": "072-sqlformatter",
+    "source": "072-SQLFormatter"
+  },
+  {
+    "title": "Git Command Builder",
+    "description": "Assemble common Git commands from guided options.",
+    "category": "Developer tools",
+    "slug": "073-gitcommandbuilder",
+    "source": "073-GitCommandBuilder"
+  },
+  {
+    "title": "GitHub README Badge Builder",
+    "description": "Build copy-ready README badges for GitHub projects.",
+    "category": "Developer tools",
+    "slug": "074-githubreadmebadgebuilder",
+    "source": "074-GitHubREADMEBadgeBuilder"
+  },
+  {
+    "title": "UUID Generator/Lab",
+    "description": "Generate and inspect UUID values in the browser.",
+    "category": "Developer tools",
+    "slug": "075-uuidgeneratorlab",
+    "source": "075-UUIDGeneratorLab"
+  },
+  {
+    "title": "HTML Entity Explorer",
+    "description": "Search HTML entities and copy their character references.",
+    "category": "Developer tools",
+    "slug": "076-htmlentityexplorer",
+    "source": "076-HTMLEntityExplorer"
+  },
+  {
+    "title": "Color Contrast Checker",
+    "description": "Check foreground and background colors against contrast guidance.",
+    "category": "Developer tools",
+    "slug": "077-colorcontrastchecker",
+    "source": "077-ColorContrastChecker"
+  },
+  {
+    "title": "Viewport Tester",
+    "description": "Preview a page at common viewport dimensions.",
+    "category": "Developer tools",
+    "slug": "078-viewporttester",
+    "source": "078-ViewportTester"
+  },
+  {
+    "title": "Generative Art Playground",
+    "description": "Create colorful procedural artwork from adjustable parameters.",
+    "category": "Creative & visual",
+    "slug": "079-generativeartplayground",
+    "source": "079-GenerativeArtPlayground"
+  },
+  {
+    "title": "Fractal Explorer",
+    "description": "Explore recursive fractal forms with interactive controls.",
+    "category": "Creative & visual",
+    "slug": "080-fractalexplorer",
+    "source": "080-FractalExplorer"
+  },
+  {
+    "title": "Constellation Maker",
+    "description": "Connect points into custom constellation illustrations.",
+    "category": "Creative & visual",
+    "slug": "081-constellationmaker",
+    "source": "081-ConstellationMaker"
+  },
+  {
+    "title": "Procedural Island Generator",
+    "description": "Generate stylized islands from procedural terrain rules.",
+    "category": "Creative & visual",
+    "slug": "082-proceduralislandgenerator",
+    "source": "082-ProceduralIslandGenerator"
+  },
+  {
+    "title": "Music Sequencer",
+    "description": "Compose repeating rhythms with a browser-based step sequencer.",
+    "category": "Audio & simulation",
+    "slug": "083-musicsequencer",
+    "source": "083-MusicSequencer"
+  },
+  {
+    "title": "Virtual Theremin",
+    "description": "Play expressive pitch and volume with pointer movement.",
+    "category": "Audio & simulation",
+    "slug": "084-virtualtheremin",
+    "source": "084-VirtualTheremin"
+  },
+  {
+    "title": "Audio Visualizer",
+    "description": "See live frequency and waveform activity as animated graphics.",
+    "category": "Audio & simulation",
+    "slug": "085-audiovisualizer",
+    "source": "085-AudioVisualizer"
+  },
+  {
+    "title": "Particle Playground",
+    "description": "Experiment with interactive particle forces and motion.",
+    "category": "Audio & simulation",
+    "slug": "086-particleplayground",
+    "source": "086-ParticlePlayground"
+  },
+  {
+    "title": "Boids Simulator",
+    "description": "Watch simple steering rules create flocking behavior.",
+    "category": "Audio & simulation",
+    "slug": "087-boidssimulator",
+    "source": "087-BoidsSimulator"
+  },
+  {
+    "title": "Gravity Sandbox",
+    "description": "Experiment with bodies, orbits, and gravity in a canvas sandbox.",
+    "category": "Audio & simulation",
+    "slug": "088-gravitysandbox",
+    "source": "088-GravitySandbox"
+  },
+  {
+    "title": "Double Pendulum Simulator",
+    "description": "Explore the unpredictable motion of a double pendulum.",
+    "category": "Audio & simulation",
+    "slug": "089-doublependulumsimulator",
+    "source": "089-DoublePendulumSimulator"
+  },
+  {
+    "title": "Fourier Drawing Visualizer",
+    "description": "Decompose a drawing into rotating Fourier components.",
+    "category": "Audio & simulation",
+    "slug": "090-fourierdrawingvisualizer",
+    "source": "090-FourierDrawingVisualizer"
+  },
+  {
+    "title": "Sorting Algorithm Race",
+    "description": "Compare sorting algorithms as they race across a data set.",
+    "category": "Audio & simulation",
+    "slug": "091-sortingalgorithmrace",
+    "source": "091-SortingAlgorithmRace"
+  },
+  {
+    "title": "Pathfinding Visualizer",
+    "description": "Visualize pathfinding algorithms navigating a grid.",
+    "category": "Audio & simulation",
+    "slug": "092-pathfindingvisualizer",
+    "source": "092-PathfindingVisualizer"
+  },
+  {
+    "title": "Cellular Automata Lab",
+    "description": "Experiment with evolving cells and neighborhood rules.",
+    "category": "Audio & simulation",
+    "slug": "093-cellularautomatalab",
+    "source": "093-CellularAutomataLab"
+  },
+  {
+    "title": "L-System Plant Generator",
+    "description": "Grow branching plant forms from L-system rules.",
+    "category": "Creative & visual",
+    "slug": "094-lsystemplantgenerator",
+    "source": "094-LSystemPlantGenerator"
+  },
+  {
+    "title": "Voronoi Playground",
+    "description": "Explore Voronoi cells and their geometric boundaries.",
+    "category": "Creative & visual",
+    "slug": "095-voronoiplayground",
+    "source": "095-VoronoiPlayground"
+  },
+  {
+    "title": "Perlin-Noise Terrain Map",
+    "description": "Generate organic terrain maps from layered noise.",
+    "category": "Creative & visual",
+    "slug": "096-perlinnoiseterrainmap",
+    "source": "096-PerlinNoiseTerrainMap"
+  },
+  {
+    "title": "Physics Marble Box",
+    "description": "Drop marbles into a playful 2D physics box.",
+    "category": "Audio & simulation",
+    "slug": "097-physicsmarblebox",
+    "source": "097-PhysicsMarbleBox"
+  },
+  {
+    "title": "Pixel Physics Sandbox",
+    "description": "Paint pixels and watch simple material physics unfold.",
+    "category": "Audio & simulation",
+    "slug": "098-pixelphysicssandbox",
+    "source": "098-PixelPhysicsSandbox"
+  },
+  {
+    "title": "Sound-to-Shape Visualizer",
+    "description": "Deform geometric shapes with local microphone frequencies.",
+    "category": "Audio & simulation",
+    "slug": "099-soundtoshapevisualizer",
+    "source": "099-SoundToShapeVisualizer"
+  },
+  {
+    "title": "Tiny Ecosystem Simulator",
+    "description": "Observe plants, herbivores, and predators evolve by simple rules.",
+    "category": "Audio & simulation",
+    "slug": "100-tinyecosystemsimulator",
+    "source": "100-TinyEcosystemSimulator"
+  }
+]

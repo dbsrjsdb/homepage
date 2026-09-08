@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Organize tasks in an urgent and important priority matrix locally.">
+  <title>PriorityMatrix | Choose what matters</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">Attention, arranged</p><h1>Priority<span>Matrix</span></h1><p class="intro">Place tasks on an urgent-versus-important matrix, then make the next action obvious without sending your list anywhere.</p></header>
+    <section class="panel" aria-labelledby="matrix-heading">
+      <div class="panel-heading"><div><p class="section-kicker">Local decision board</p><h2 id="matrix-heading">What deserves attention?</h2></div><span id="task-count" class="summary">0 tasks</span></div>
+      <form id="task-form" class="task-form"><label for="task-input">New task<input id="task-input" maxlength="100" autocomplete="off" placeholder="Add something to prioritize…"></label><label for="quadrant-input">Start in<select id="quadrant-input"><option value="do">Do first</option><option value="schedule">Schedule</option><option value="delegate">Delegate</option><option value="drop">Drop</option></select></label><button type="submit">Add task</button></form>
+      <p id="status" class="status" role="status" aria-live="polite">Drag a task or use its quadrant menu to move it.</p>
+      <div class="matrix" aria-label="Urgent and important priority matrix"><div class="axis urgent-axis">URGENT →</div><div class="axis important-axis">IMPORTANT ↑</div><section class="quadrant do" data-quadrant="do"><div class="quadrant-heading"><h3>Do first</h3><span>Urgent + important</span></div><div class="cards"></div></section><section class="quadrant schedule" data-quadrant="schedule"><div class="quadrant-heading"><h3>Schedule</h3><span>Important, not urgent</span></div><div class="cards"></div></section><section class="quadrant delegate" data-quadrant="delegate"><div class="quadrant-heading"><h3>Delegate</h3><span>Urgent, not important</span></div><div class="cards"></div></section><section class="quadrant drop" data-quadrant="drop"><div class="quadrant-heading"><h3>Drop</h3><span>Neither</span></div><div class="cards"></div></section></div>
+      <div class="board-actions"><button id="clear-button" class="secondary-button" type="button">Clear matrix</button><button id="reset-button" class="secondary-button" type="button">Restore sample</button></div>
+    </section>
+  </main>
+  <footer class="site-footer"><p>Tasks stay in this browser with localStorage.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

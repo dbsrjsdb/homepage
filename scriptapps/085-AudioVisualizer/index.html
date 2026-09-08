@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Transform microphone input into live waveform and frequency graphics locally.">
+  <title>AudioVisualizer | See the sound around you</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">Sound has a shape</p><h1>Audio<span>Visualizer</span></h1><p class="intro">Let your microphone become a live waveform or frequency field. Audio is analyzed in the browser and never uploaded.</p></header>
+    <section class="panel controls" aria-labelledby="controls-heading"><div class="panel-heading"><div><p class="section-kicker">Input controls</p><h2 id="controls-heading">Open your ears</h2></div><span id="state" class="badge">Waiting for input</span></div><div class="control-row"><button id="start" type="button">Start microphone</button><button id="stop" class="secondary-button" type="button">Stop</button><label>View<select id="view"><option value="spectrum">Frequency spectrum</option><option value="waveform">Waveform</option></select></label><label>Sensitivity <output id="sensitivity-value">1.0×</output><input id="sensitivity" type="range" min="5" max="20" value="10"></label></div><p id="status" class="status" role="status" aria-live="polite">Press Start microphone and allow access to begin.</p></section>
+    <section class="panel visual-panel" aria-labelledby="visual-heading"><div class="panel-heading"><div><p class="section-kicker">Live signal</p><h2 id="visual-heading">A picture of the moment</h2></div><span id="mode-label" class="badge">Frequency spectrum</span></div><div class="canvas-wrap"><canvas id="canvas" width="900" height="460" aria-label="Live audio visualization"></canvas><div id="idle" class="idle"><span>◌</span><p>No signal yet</p><small>Your microphone stays local to this page.</small></div></div><div class="metrics"><div><span>Input</span><strong id="input-state">Idle</strong></div><div><span>Mode</span><strong id="metric-mode">Spectrum</strong></div><div><span>Permission</span><strong id="permission">Not requested</strong></div></div></section>
+  </main>
+  <footer class="site-footer"><p>Microphone access is used only for local analysis and can be stopped at any time.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

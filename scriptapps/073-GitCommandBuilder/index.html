@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Choose a Git task and generate the matching command locally.">
+  <title>GitCommandBuilder | Make the next move clear</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">A little less command-line guesswork</p><h1>Git<span>CommandBuilder</span></h1><p class="intro">Choose what you want to accomplish, add the details, and get a copy-ready Git command without leaving your browser.</p></header>
+    <section class="panel" aria-labelledby="builder-heading"><div class="panel-heading"><div><p class="section-kicker">Local command helper</p><h2 id="builder-heading">Make the next move clear</h2></div><span class="badge">No commands run</span></div>
+      <div class="form-grid"><label>Task<select id="task"><option value="status">Check working tree</option><option value="branch">Create a branch</option><option value="commit">Commit staged changes</option><option value="push">Push a branch</option><option value="pull">Pull latest changes</option><option value="remote">Add a remote</option><option value="undo">Undo last commit safely</option></select></label><label id="branch-field">Branch name<input id="branch" placeholder="feature/my-change" autocomplete="off"></label><label id="message-field">Commit message<input id="message" placeholder="Describe the change" autocomplete="off"></label><label id="remote-field" hidden>Remote URL<input id="remote" placeholder="https://github.com/user/repo.git" autocomplete="off"></label><label id="remote-name-field" hidden>Remote name<input id="remote-name" value="origin" autocomplete="off"></label></div><div class="options"><label><input id="set-upstream" type="checkbox" checked> Set upstream when pushing</label><label><input id="force-safe" type="checkbox" checked> Prefer safer flags</label></div><div class="output"><code id="command">git status --short</code><button id="copy" type="button">Copy command</button></div><p id="status" class="status" role="status" aria-live="polite">Command updates as you choose options.</p><button id="reset" class="secondary-button reset" type="button">Reset builder</button>
+    </section>
+  </main>
+  <footer class="site-footer"><p>Commands are suggestions only and never execute here.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Test your reaction time locally and track your recent distribution.">
+  <title>ReactionTimeTester | Wait for the signal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">A pause, then a spark</p><h1>Reaction<span>Tester</span></h1><p class="intro">Wait for the field to turn green, then click as quickly as you can. False starts count as useful data too.</p></header>
+    <section class="panel" aria-labelledby="tester-heading"><div class="panel-heading"><div><p class="section-kicker">Local reflex test</p><h2 id="tester-heading">Ready when you are</h2></div><div class="stats"><span>Best <strong id="best">—</strong></span><span>Average <strong id="average">—</strong></span></div></div>
+      <button id="reaction-area" class="reaction-area idle" type="button" aria-label="Reaction test area"><span id="signal-title">Click to start</span><small id="signal-detail">Wait for green, then move.</small></button><p id="status" class="status" role="status" aria-live="polite">Your recent attempts will appear below.</p>
+      <div class="actions"><button id="start-button" type="button">Start test</button><button id="clear-button" class="secondary-button" type="button">Clear results</button></div>
+      <div class="distribution"><div class="subheading"><h3>Recent attempts</h3><span id="attempt-count">0 tests</span></div><ol id="history"><li class="empty">No attempts yet.</li></ol></div>
+    </section>
+  </main>
+  <footer class="site-footer"><p>Timing uses the browser's high-resolution clock.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

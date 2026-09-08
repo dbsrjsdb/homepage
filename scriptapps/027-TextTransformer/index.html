@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Transform text locally with case conversion, whitespace cleanup, sorting, and deduplication.">
+  <title>TextTransformer | Make text behave</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">Small edits, clear results</p><h1>Text<span>Transformer</span></h1><p class="intro">Clean up, reshape, and standardize text with a handful of practical transformations that run locally.</p></header>
+    <section class="panel" aria-labelledby="transform-heading">
+      <div class="panel-heading"><div><p class="section-kicker">Local text utility</p><h2 id="transform-heading">Transform your text</h2></div><span class="summary">Nothing is uploaded</span></div>
+      <div class="workspace"><label for="input-text">Input<textarea id="input-text" spellcheck="false" placeholder="Paste text here…"></textarea></label><div class="arrow" aria-hidden="true">→</div><label for="output-text">Output<textarea id="output-text" readonly spellcheck="false" aria-live="polite" placeholder="Your transformed text will appear here…"></textarea></label></div>
+      <div class="controls"><label for="case-select">Case conversion<select id="case-select"><option value="none">Keep original case</option><option value="upper">UPPERCASE</option><option value="lower">lowercase</option><option value="title">Title Case</option><option value="sentence">Sentence case</option></select></label><fieldset><legend>Line and spacing cleanup</legend><label><input id="trim-lines" type="checkbox" checked> Trim each line</label><label><input id="collapse-spaces" type="checkbox"> Collapse repeated spaces</label><label><input id="sort-lines" type="checkbox"> Sort lines A–Z</label><label><input id="dedupe-lines" type="checkbox"> Remove duplicate lines</label></fieldset></div>
+      <div class="actions"><button id="transform-button" type="button">Transform text</button><button id="copy-button" class="secondary-button" type="button">Copy output</button><button id="clear-button" class="secondary-button" type="button">Clear</button></div>
+      <p id="status" class="status" role="status" aria-live="polite">Enter text to begin.</p><div class="details"><span>Input</span><strong id="input-count">0 characters</strong><span>Output</span><strong id="output-count">0 characters</strong></div>
+    </section>
+  </main>
+  <footer class="site-footer"><p>Text processing happens entirely in this browser.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

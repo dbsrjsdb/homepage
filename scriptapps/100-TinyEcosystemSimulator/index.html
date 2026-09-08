@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore a tiny browser-based ecosystem where plants, herbivores, and predators change over time.">
+  <title>Tiny Ecosystem Simulator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <p class="eyebrow">Microhabitat lab</p>
+      <h1>Tiny Ecosystem Simulator</h1>
+      <p class="lede">Watch a small food web find its balance. Plants spread, herbivores graze and reproduce, and predators hunt.</p>
+    </header>
+
+    <section class="workspace" aria-label="Ecosystem simulation">
+      <aside class="controls panel">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Experiment</p>
+            <h2>World settings</h2>
+          </div>
+          <span id="run-state" class="status-chip" role="status">Paused</span>
+        </div>
+
+        <label>Plants <output id="plants-value">28</output>
+          <input id="plants" type="range" min="5" max="70" value="28">
+        </label>
+        <label>Herbivores <output id="herbivores-value">12</output>
+          <input id="herbivores" type="range" min="2" max="35" value="12">
+        </label>
+        <label>Predators <output id="predators-value">4</output>
+          <input id="predators" type="range" min="0" max="15" value="4">
+        </label>
+        <label>Simulation speed <output id="speed-value">1×</output>
+          <input id="speed" type="range" min="1" max="4" value="1">
+        </label>
+
+        <div class="actions">
+          <button id="toggle" class="primary" type="button">Start simulation</button>
+          <button id="step" type="button">Step once</button>
+          <button id="reset" class="quiet" type="button">Reset world</button>
+        </div>
+
+        <p id="message" class="message" role="status" aria-live="polite">Press Start simulation to begin.</p>
+        <div class="rules">
+          <h3>Rules of the world</h3>
+          <p>Plants regrow slowly. Herbivores eat nearby plants and reproduce when fed. Predators hunt herbivores, but starve without prey.</p>
+        </div>
+      </aside>
+
+      <section class="visual panel">
+        <div class="visual-top">
+          <div>
+            <p class="eyebrow">Live habitat</p>
+            <h2>Generational view</h2>
+          </div>
+          <span id="generation" class="generation">Generation 0</span>
+        </div>
+        <div class="canvas-wrap">
+          <canvas id="world" width="900" height="540" aria-label="Animated ecosystem habitat visualization"></canvas>
+          <div id="empty" class="empty" hidden>All populations have faded. Reset the world to try another balance.</div>
+        </div>
+        <div class="legend" aria-label="Population legend">
+          <span><i class="dot plant"></i>Plants <strong id="plant-count">28</strong></span>
+          <span><i class="dot herbivore"></i>Herbivores <strong id="herbivore-count">12</strong></span>
+          <span><i class="dot predator"></i>Predators <strong id="predator-count">4</strong></span>
+        </div>
+      </section>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A collection of lightweight web applications built by me."
+    />
+    <title>JSPlaygroundHub | Web applications</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="hero">
+        <p class="eyebrow">A small corner of the web</p>
+        <h1>JSPlaygroundHub</h1>
+        <p class="intro">
+          Explore lightweight web applications built to solve everyday problems
+          and experiment with useful ideas.
+        </p>
+      </header>
+
+      <section class="featured-section" aria-labelledby="featured-heading">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Start here</p>
+            <h2 id="featured-heading">Featured</h2>
+          </div>
+          <p class="section-note">A few especially fun places to begin</p>
+        </div>
+        <div id="featured-grid" class="app-grid featured-grid"></div>
+      </section>
+
+      <section class="apps-section" aria-labelledby="apps-heading">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">The collection</p>
+            <h2 id="apps-heading">Applications</h2>
+          </div>
+          <p id="app-count" class="app-count" aria-live="polite"></p>
+        </div>
+        <div class="app-controls" aria-label="Filter applications">
+          <label class="search-label" for="app-search">Search projects</label>
+          <input
+            id="app-search"
+            type="search"
+            placeholder="Search by name or description"
+            autocomplete="off"
+          />
+          <div id="category-filters" class="category-filters" role="group" aria-label="Project categories"></div>
+        </div>
+        <div id="app-grid" class="app-grid"></div>
+        <p id="empty-state" class="empty-state" hidden>No projects match that search.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Built with plain HTML, CSS, and JavaScript.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

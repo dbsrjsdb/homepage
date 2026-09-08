@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { SiteHeader } from '@/components/site-header';
+import { SiteSidebar } from '@/components/site-sidebar';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -18,13 +18,15 @@ export default function RootLayout({
         <a className="skip-link" href="#main-content">
           Skip to content
         </a>
-        <SiteHeader />
-        {children}
-        <footer className="site-footer">
-          <span>© {new Date().getFullYear()} Meltyheart</span>
-          <span>Made with curiosity.</span>
-          <Link href="/">Back to home ↑</Link>
-        </footer>
+        <SiteSidebar />
+        <div className="site-content">
+          {children}
+          <footer className="site-footer">
+            <span>© {new Date().getFullYear()} Meltyheart</span>
+            <span>Made with curiosity.</span>
+            <Link href="/">Back to home ↑</Link>
+          </footer>
+        </div>
       </body>
     </html>
   );

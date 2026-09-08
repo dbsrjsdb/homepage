@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Create seeded generative canvas artwork with adjustable complexity and symmetry.">
+  <title>GenerativeArtPlayground | Make a pattern from a seed</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">A little order inside the noise</p><h1>Generative<span>Art Playground</span></h1><p class="intro">Choose a seed, turn the complexity and symmetry dials, and make a one-of-a-kind canvas composition entirely in your browser.</p></header>
+    <section class="workspace">
+      <section class="panel controls" aria-labelledby="controls-heading"><div class="panel-heading"><div><p class="section-kicker">Composition controls</p><h2 id="controls-heading">Set the rules</h2></div><span class="badge">Seeded canvas</span></div>
+        <label class="field">Seed <span class="hint">same seed, same art</span><div class="seed-row"><input id="seed" value="luminous-garden" maxlength="32" autocomplete="off"><button id="random-seed" class="small-button" type="button">Randomize</button></div></label>
+        <label class="field">Complexity <output id="complexity-value">58</output><input id="complexity" type="range" min="12" max="120" value="58"></label>
+        <label class="field">Symmetry <output id="symmetry-value">8 rays</output><input id="symmetry" type="range" min="1" max="16" value="8"></label>
+        <label class="field">Palette<select id="palette"><option value="aurora">Aurora</option><option value="ember">Ember</option><option value="ultraviolet">Ultraviolet</option><option value="meadow">Meadow</option></select></label>
+        <div class="button-row"><button id="generate" type="button">Generate artwork</button><button id="reset" class="secondary-button" type="button">Reset</button></div>
+        <p id="status" class="status" role="status" aria-live="polite">Ready to compose a seeded pattern.</p>
+      </section>
+      <section class="panel canvas-panel" aria-labelledby="canvas-heading"><div class="panel-heading"><div><p class="section-kicker">Canvas output</p><h2 id="canvas-heading">The shape of a seed</h2></div><button id="download" class="secondary-button" type="button">Save PNG</button></div><div class="canvas-wrap"><canvas id="canvas" width="800" height="600" aria-label="Generated symmetrical abstract artwork"></canvas></div><p class="canvas-note">Seed <strong id="seed-label">luminous-garden</strong> · <span id="detail-label">58 forms · 8-fold symmetry</span></p></section>
+    </section>
+  </main>
+  <footer class="site-footer"><p>Artwork is generated locally with the Canvas API and never uploaded.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

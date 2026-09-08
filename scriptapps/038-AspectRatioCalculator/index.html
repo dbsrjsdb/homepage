@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Calculate aspect ratio dimensions and compare common ratios visually.">
+  <title>AspectRatioCalculator | Keep proportions</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">Keep the shape</p><h1>Aspect<span>RatioCalculator</span></h1><p class="intro">Calculate a missing dimension, simplify a ratio, and compare common screen shapes with a quick visual preview.</p></header>
+    <section class="panel" aria-labelledby="ratio-heading">
+      <div class="panel-heading"><div><p class="section-kicker">Local proportion tool</p><h2 id="ratio-heading">Calculate dimensions</h2></div><span class="summary">No data leaves this browser</span></div>
+      <div class="controls"><label for="width-input">Width<input id="width-input" type="number" min="0.01" step="any" value="1920"></label><span class="multiply" aria-hidden="true">×</span><label for="height-input">Height<input id="height-input" type="number" min="0.01" step="any" value="1080"></label><label for="ratio-select">Target ratio<select id="ratio-select"><option value="16:9">16:9 · widescreen</option><option value="4:3">4:3 · classic</option><option value="1:1">1:1 · square</option><option value="3:2">3:2 · photo</option><option value="9:16">9:16 · portrait</option><option value="custom">Custom</option></select></label></div>
+      <div id="custom-ratio" class="custom-ratio" hidden><label for="ratio-width">Ratio width<input id="ratio-width" type="number" min="1" value="16"></label><span>:</span><label for="ratio-height">Ratio height<input id="ratio-height" type="number" min="1" value="9"></label></div>
+      <div class="actions"><button id="calculate-button" type="button">Calculate</button><button id="swap-button" class="secondary-button" type="button">Swap dimensions</button><button id="reset-button" class="secondary-button" type="button">Reset</button></div>
+      <p id="status" class="status" role="status" aria-live="polite">Enter dimensions to begin.</p>
+      <div class="result"><div><span>Ratio</span><strong id="ratio-output">16:9</strong></div><div><span>Suggested height</span><strong id="height-output">1080</strong></div><div><span>Suggested width</span><strong id="width-output">1920</strong></div><div><span>Current ratio</span><strong id="current-output">16:9</strong></div></div>
+      <div class="preview-section"><div class="subheading"><h3>Visual comparison</h3><span>Target shape</span></div><div class="preview-area"><div id="preview-box" class="preview-box"><span id="preview-label">16:9</span></div></div><div id="ratio-cards" class="ratio-cards"></div></div>
+    </section>
+  </main>
+  <footer class="site-footer"><p>All calculations use the dimensions you enter.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

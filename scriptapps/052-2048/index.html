@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Play a compact local 2048 tile-merging game with keyboard and swipe controls.">
+  <title>2048 | Make room for one more tile</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">A tidy little numbers game</p><h1>2048<span>Merge</span></h1><p class="intro">Slide matching tiles together, make space for the next move, and chase the 2048 tile without leaving your browser.</p></header>
+    <section class="panel" aria-labelledby="game-heading"><div class="panel-heading"><div><p class="section-kicker">Local puzzle</p><h2 id="game-heading">Keep moving</h2></div><div class="stats"><span>Score <strong id="score">0</strong></span><span>Best <strong id="best">0</strong></span></div></div>
+      <div id="board" class="board" role="grid" aria-label="2048 game board"></div><p id="status" class="status" role="status" aria-live="polite">Use arrow keys or swipe to begin.</p>
+      <div class="actions"><button id="new-game" type="button">New game</button><button id="undo" class="secondary-button" type="button">Undo move</button></div>
+      <div class="mobile-controls" aria-label="Move controls"><button data-direction="up" type="button" aria-label="Move up">▲</button><div><button data-direction="left" type="button" aria-label="Move left">◀</button><button data-direction="down" type="button" aria-label="Move down">▼</button><button data-direction="right" type="button" aria-label="Move right">▶</button></div></div>
+      <p class="hint">Arrow keys, WASD, or swipe. Each move adds a tile.</p>
+    </section>
+  </main>
+  <footer class="site-footer"><p>Your best score is saved locally in this browser.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

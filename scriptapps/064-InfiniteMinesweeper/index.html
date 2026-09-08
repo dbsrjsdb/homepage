@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore an expandable local Minesweeper field with procedural cells.">
+  <title>InfiniteMinesweeper | Keep exploring</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">A field without an edge</p><h1>Infinite<span>Minesweeper</span></h1><p class="intro">Explore outward through a procedurally generated minefield. Pan to new territory, reveal safe cells, and leave flags where danger waits.</p></header>
+    <section class="panel" aria-labelledby="game-heading"><div class="panel-heading"><div><p class="section-kicker">Local endless field</p><h2 id="game-heading">Keep exploring</h2></div><div class="stats"><span>Revealed <strong id="revealed">0</strong></span><span>Flags <strong id="flags">0</strong></span><span>Position <strong id="position">0, 0</strong></span></div></div>
+      <div class="toolbar"><button id="new-world" type="button">New world</button><button id="recenter" class="secondary-button" type="button">Recenter</button><span id="status-badge" class="badge">Exploring</span></div><p id="status" class="status" role="status" aria-live="polite">Click a cell to reveal it. Right-click to flag.</p><div id="field" class="field" role="grid" aria-label="Infinite Minesweeper viewport"></div>
+      <div class="navigation" aria-label="Pan controls"><button data-pan="up" type="button" aria-label="Pan up">▲</button><div><button data-pan="left" type="button" aria-label="Pan left">◀</button><button data-pan="down" type="button" aria-label="Pan down">▼</button><button data-pan="right" type="button" aria-label="Pan right">▶</button></div></div><p class="hint">Arrow keys or buttons pan the field. Your explored cells persist as you travel.</p>
+      <div class="legend"><span><i class="safe"></i>Safe</span><span><i class="danger"></i>Mine</span><span><i class="flag"></i>Flagged</span></div>
+    </section>
+  </main>
+  <footer class="site-footer"><p>The procedural minefield is generated entirely in this browser.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

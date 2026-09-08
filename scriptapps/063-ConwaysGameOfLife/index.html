@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Draw cells, run Conway's Game of Life generations, and load classic patterns locally.">
+  <title>Conway's Game of Life | Small rules, strange worlds</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">A tiny world with simple rules</p><h1>Conway's<span>Game of Life</span></h1><p class="intro">Draw a living pattern, press play, and watch each generation emerge from its neighbors.</p></header>
+    <section class="panel" aria-labelledby="life-heading"><div class="panel-heading"><div><p class="section-kicker">Local cellular automaton</p><h2 id="life-heading">Set life in motion</h2></div><div class="stats"><span>Generation <strong id="generation">0</strong></span><span>Population <strong id="population">0</strong></span></div></div>
+      <div class="settings"><label>Speed<select id="speed"><option value="180">Slow</option><option value="90" selected>Steady</option><option value="35">Fast</option></select></label><label>Patterns<select id="pattern"><option value="blank">Blank canvas</option><option value="glider">Glider</option><option value="blinker">Blinker</option><option value="pulsar">Pulsar</option></select></label><button id="load-pattern" type="button">Load pattern</button></div>
+      <div class="canvas-wrap"><canvas id="life" width="600" height="360" role="img" aria-label="Interactive Game of Life grid"></canvas></div><p id="status" class="status" role="status" aria-live="polite">Click cells to draw, then press play.</p>
+      <div class="actions"><button id="play" type="button">Play</button><button id="step" class="secondary-button" type="button">Step</button><button id="randomize" class="secondary-button" type="button">Randomize</button><button id="clear" class="secondary-button" type="button">Clear</button></div><p class="hint">Click or tap the grid to toggle living cells. Conway's rules run locally.</p>
+    </section>
+  </main>
+  <footer class="site-footer"><p>Your pattern stays in this browser.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

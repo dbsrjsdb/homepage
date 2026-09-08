@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore CSV files locally with sorting, filtering, and basic column statistics.">
+  <title>CSVExplorer | See your rows clearly</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">Rows, made useful</p><h1>CSV<span>Explorer</span></h1><p class="intro">Drop a CSV, browse its rows, sort any column, filter the table, and inspect quick statistics without uploading the file.</p></header>
+    <section class="panel" aria-labelledby="csv-heading">
+      <div class="panel-heading"><div><p class="section-kicker">Local data desk</p><h2 id="csv-heading">Explore a CSV</h2></div><span class="summary">Your file stays here</span></div>
+      <label id="drop-zone" class="drop-zone" for="file-input"><strong>Drop a CSV here</strong><span>or choose a file · UTF-8 comma-separated data</span><input id="file-input" type="file" accept=".csv,text/csv"></label>
+      <label for="csv-input" class="paste-label">Paste CSV<textarea id="csv-input" spellcheck="false" placeholder="name,team,score\nAda,Blue,98\nLin,Gold,87"></textarea></label>
+      <div class="actions"><button id="load-button" type="button">Load CSV</button><button id="sample-button" class="secondary-button" type="button">Use sample</button><button id="clear-button" class="secondary-button" type="button">Clear</button></div>
+      <p id="status" class="status" role="status" aria-live="polite">Drop or paste CSV to begin.</p>
+      <div class="controls"><label for="filter-input">Filter rows<input id="filter-input" type="search" placeholder="Search all columns…"></label><span id="row-count" class="row-count">0 rows</span></div>
+      <div id="table-output" class="table-wrap" aria-live="polite"><div class="empty-state">Your CSV table will appear here.</div></div>
+      <div id="stats-output" class="stats" aria-live="polite"></div>
+    </section>
+  </main>
+  <footer class="site-footer"><p>CSV parsing and analysis happen entirely in this browser.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Compare working hours across time zones and find a meeting overlap.">
+  <title>TimezoneMeetingFinder | Find a time that works</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero">
+      <p class="eyebrow">A calmer way to schedule</p>
+      <h1>Timezone<span>MeetingFinder</span></h1>
+      <p class="intro">Compare local working hours on one horizontal UTC timeline and spot the overlap at a glance.</p>
+    </header>
+
+    <section class="panel" aria-labelledby="finder-heading">
+      <div class="panel-heading">
+        <div><p class="section-kicker">Plan the day</p><h2 id="finder-heading">Meeting windows</h2></div>
+        <span id="timezone-label" class="summary"></span>
+      </div>
+      <div class="controls">
+        <label for="date-input">Date to compare<input id="date-input" type="date"></label>
+        <button id="today-button" type="button">Use today</button>
+        <button id="reset-button" class="secondary-button" type="button">Reset</button>
+      </div>
+      <div class="people" id="people" aria-label="Participants"></div>
+      <p id="status" class="status" role="status" aria-live="polite">Adjust a participant to find a shared window.</p>
+      <div class="timeline-wrap">
+        <div class="timeline-title"><strong>UTC timeline</strong><span>00:00 → 24:00</span></div>
+        <div id="timeline" class="timeline" aria-label="Meeting availability timeline"></div>
+      </div>
+      <div class="overlap" id="overlap" aria-live="polite"></div>
+    </section>
+  </main>
+  <footer class="site-footer"><p>Timezone calculations use your browser's built-in time zone data.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

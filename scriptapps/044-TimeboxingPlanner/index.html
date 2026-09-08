@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Plan a day with draggable time blocks on a local 24-hour timeline.">
+  <title>TimeboxingPlanner | Give the day a shape</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">Time is a container</p><h1>Timeboxing<span>Planner</span></h1><p class="intro">Give important work a home on the day, move blocks around the timeline, and see conflicts before they become surprises.</p></header>
+    <section class="panel" aria-labelledby="planner-heading">
+      <div class="panel-heading"><div><p class="section-kicker">Local day planner</p><h2 id="planner-heading">Shape today</h2></div><span id="date-label" class="summary"></span></div>
+      <form id="block-form" class="block-form"><label for="title-input">Block title<input id="title-input" maxlength="50" placeholder="Deep work" autocomplete="off"></label><label for="start-input">Start<input id="start-input" type="time" value="09:00"></label><label for="duration-input">Minutes<input id="duration-input" type="number" min="15" max="720" step="15" value="60"></label><button type="submit">Add block</button></form>
+      <p id="status" class="status" role="status" aria-live="polite">Drag a block onto the timeline to move it.</p>
+      <div class="planner"><div class="time-labels"></div><div id="timeline" class="timeline" aria-label="24-hour timeboxing timeline" role="grid"><div class="hour-lines"></div><div id="blocks"></div></div></div>
+      <div class="day-actions"><button id="clear-button" class="secondary-button" type="button">Clear day</button><button id="reset-button" class="secondary-button" type="button">Restore sample</button></div>
+    </section>
+  </main>
+  <footer class="site-footer"><p>Blocks are saved locally in this browser.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

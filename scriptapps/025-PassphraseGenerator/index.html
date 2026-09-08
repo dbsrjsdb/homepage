@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Generate readable multi-word passphrases locally with secure random choices.">
+  <title>PassphraseGenerator | Words worth remembering</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">Readable security</p><h1>Passphrase<span>Generator</span></h1><p class="intro">Build a memorable phrase from randomly chosen words, with just enough control to make it yours.</p></header>
+    <section class="panel" aria-labelledby="generator-heading">
+      <div class="panel-heading"><div><p class="section-kicker">A little more human</p><h2 id="generator-heading">Phrase recipe</h2></div><span class="summary">Generated only on this device</span></div>
+      <div class="phrase-card"><label for="phrase-output">Your passphrase</label><div class="output-row"><output id="phrase-output" aria-live="polite">—</output><button id="copy-button" class="secondary-button" type="button">Copy</button></div><div class="strength-row"><div class="meter" aria-hidden="true"><span id="strength-bar"></span></div><span id="strength-label">—</span></div></div>
+      <div class="settings">
+        <label for="word-count">Words <output id="word-count-value">5</output><input id="word-count" type="range" min="3" max="8" value="5"></label>
+        <label for="separator">Separator<select id="separator"><option value="-">Hyphen —</option><option value=" ">Space</option><option value=".">Period</option><option value="_">Underscore</option></select></label>
+        <fieldset><legend>Finishing touches</legend><label><input id="capitalize" type="checkbox"> Capitalize each word</label><label><input id="add-number" type="checkbox" checked> Add two random digits</label></fieldset>
+      </div>
+      <button id="generate-button" class="generate-button" type="button">Generate passphrase</button>
+      <p id="status" class="status" role="status" aria-live="polite">Ready to generate a passphrase.</p>
+      <div class="details"><span>Estimated entropy</span><strong id="entropy-output">—</strong><span>Word list</span><strong id="pool-output">—</strong></div>
+    </section>
+  </main>
+  <footer class="site-footer"><p>Uses the Web Crypto API locally. Store important secrets in a password manager.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

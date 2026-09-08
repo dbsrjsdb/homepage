@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Generate procedural plants and trees from simple L-system grammars locally.">
+  <title>LSystemPlantGenerator | Grow a grammar</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">A branch is a sentence repeated</p><h1>L-System<span>Plant Generator</span></h1><p class="intro">Choose a small grammar, iterate its symbols, and render a procedural plant with a turtle that knows how to turn.</p></header>
+    <section class="panel controls" aria-labelledby="controls-heading"><div class="panel-heading"><div><p class="section-kicker">Grammar controls</p><h2 id="controls-heading">Choose a species</h2></div><span class="badge">Turtle renderer</span></div><div class="control-row"><button id="generate" type="button">Grow plant</button><button id="random" class="secondary-button" type="button">Surprise me</button><label>Preset<select id="preset"><option value="fern">Fern</option><option value="tree">Branching tree</option><option value="bush">Winter bush</option></select></label><label>Iterations <output id="depth-value">5</output><input id="depth" type="range" min="1" max="7" value="5"></label><label>Turn angle <output id="angle-value">25°</output><input id="angle" type="range" min="10" max="55" value="25"></label><label>Palette<select id="palette"><option value="sage">Sage</option><option value="sunset">Sunset</option><option value="ice">Ice garden</option></select></label></div><p id="status" class="status" role="status" aria-live="polite">Fern · iteration 5. Ready to grow.</p></section>
+    <section class="panel canvas-panel" aria-labelledby="canvas-heading"><div class="panel-heading"><div><p class="section-kicker">Procedural garden</p><h2 id="canvas-heading">Let the symbols branch</h2></div><span id="stats" class="badge">0 segments</span></div><div class="canvas-wrap"><canvas id="canvas" width="900" height="620" aria-label="Generated procedural L-system plant"></canvas></div><div class="canvas-note"><span id="grammar">F → FF+[+F-F-F]-[-F+F+F]</span><span>·</span><span>Generated locally</span></div></section>
+  </main>
+  <footer class="site-footer"><p>L-system strings and plant geometry are generated locally in your browser.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

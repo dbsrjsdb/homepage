@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Generate a stylized seeded island map locally in a Canvas.">
+  <title>ProceduralIslandGenerator | Shape a little world</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">A small world from a small seed</p><h1>Procedural<span>Island Generator</span></h1><p class="intro">Generate a stylized island from seeded noise, tune its coastline and terrain detail, and export the map as a PNG.</p></header>
+    <section class="workspace">
+      <section class="panel controls" aria-labelledby="controls-heading"><div class="panel-heading"><div><p class="section-kicker">World settings</p><h2 id="controls-heading">Shape the land</h2></div><span class="badge">Seeded noise</span></div>
+        <label class="field">Seed <span class="hint">same seed, same island</span><div class="seed-row"><input id="seed" value="archipelago-7" maxlength="28" autocomplete="off"><button id="random" class="small-button" type="button">Randomize</button></div></label>
+        <label class="field">Coastline <output id="coast-value">52%</output><input id="coast" type="range" min="35" max="70" value="52"></label>
+        <label class="field">Terrain detail <output id="detail-value">3 octaves</output><input id="detail" type="range" min="1" max="5" value="3"></label>
+        <label class="field">Map palette<select id="palette"><option value="lagoon">Lagoon</option><option value="autumn">Autumn coast</option><option value="night">Night island</option></select></label>
+        <div class="button-row"><button id="generate" type="button">Generate island</button><button id="download" class="secondary-button" type="button">Save PNG</button></div>
+        <p id="status" class="status" role="status" aria-live="polite">Ready to map a new island.</p>
+      </section>
+      <section class="panel map-panel" aria-labelledby="map-heading"><div class="panel-heading"><div><p class="section-kicker">Generated map</p><h2 id="map-heading">A shore worth exploring</h2></div><span id="map-label" class="badge">archipelago-7</span></div><div class="canvas-wrap"><canvas id="canvas" width="720" height="560" aria-label="Generated procedural island map"></canvas></div><p class="map-note">Land is sampled from layered value noise and shaped with a radial island falloff.</p></section>
+    </section>
+  </main>
+  <footer class="site-footer"><p>Terrain is generated locally with the Canvas API and never uploaded.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

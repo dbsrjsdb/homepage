@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Calculate SHA-256 and SHA-512 hashes for files locally in your browser.">
+  <title>FileHashCalculator | Verify locally</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">Trust, but verify</p><h1>File<span>HashCalculator</span></h1><p class="intro">Drop a file to calculate a cryptographic fingerprint locally. Nothing is uploaded, stored, or sent to a server.</p></header>
+    <section class="panel" aria-labelledby="hash-heading">
+      <div class="panel-heading"><div><p class="section-kicker">Local verification</p><h2 id="hash-heading">Calculate a file hash</h2></div><span class="summary">Web Crypto API</span></div>
+      <label id="drop-zone" class="drop-zone" for="file-input"><strong>Drop a file here</strong><span>or choose one from your device</span><input id="file-input" type="file"></label>
+      <div id="file-details" class="file-details" hidden><strong id="file-name"></strong><span id="file-size"></span></div>
+      <div class="controls"><label for="algorithm-input">Algorithm<select id="algorithm-input"><option value="SHA-256">SHA-256</option><option value="SHA-512">SHA-512</option></select></label><button id="calculate-button" type="button">Calculate hash</button><button id="clear-button" class="secondary-button" type="button">Clear</button></div>
+      <p id="status" class="status" role="status" aria-live="polite">Choose a file to begin.</p>
+      <div class="result-card"><div class="result-heading"><h3>Digest</h3><button id="copy-button" class="tiny-button" type="button">Copy</button></div><output id="hash-output" aria-live="polite">—</output></div>
+      <p class="help">Hashes are shown as lowercase hexadecimal strings. A changed file produces a different digest.</p>
+    </section>
+  </main>
+  <footer class="site-footer"><p>Files are read into memory only while hashing.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

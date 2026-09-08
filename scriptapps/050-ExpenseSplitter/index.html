@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Split a bill with individual items and weighted shared costs locally.">
+  <title>ExpenseSplitter | Make the math fair</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">Less awkward arithmetic</p><h1>Expense<span>Splitter</span></h1><p class="intro">Add the people, assign individual items, and divide shared costs by each person’s chosen share. The calculation stays right here.</p></header>
+    <section class="panel" aria-labelledby="split-heading">
+      <div class="panel-heading"><div><p class="section-kicker">Local bill planner</p><h2 id="split-heading">Build the split</h2></div><span id="total-summary" class="summary">$0.00 total</span></div>
+      <div class="section"><div class="section-title"><h3>People</h3><button id="add-person" class="small-button" type="button">+ Add person</button></div><div id="people-list" class="rows"></div></div>
+      <div class="section"><div class="section-title"><h3>Individual items</h3><button id="add-item" class="small-button" type="button">+ Add item</button></div><div id="items-list" class="rows"></div><p id="items-empty" class="empty-row">No individual items yet. Shared costs can still be divided below.</p></div>
+      <div class="section costs"><h3>Shared costs</h3><div class="cost-grid"><label>Shared amount<input id="shared-cost" type="number" min="0" step="0.01" value="0" inputmode="decimal"></label><label>Tax / tip %<input id="tax-rate" type="number" min="0" max="100" step="0.1" value="0" inputmode="decimal"></label></div><p class="hint">Shared amount and tax/tip are divided by each person’s share weight.</p></div>
+      <div class="actions"><button id="reset-button" class="secondary-button" type="button">Reset sample</button><button id="copy-button" type="button">Copy summary</button></div>
+      <p id="status" class="status" role="status" aria-live="polite">Add people to begin.</p><div id="results" class="results" aria-live="polite"></div>
+    </section>
+  </main>
+  <footer class="site-footer"><p>Calculations happen locally; no bill data is uploaded.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

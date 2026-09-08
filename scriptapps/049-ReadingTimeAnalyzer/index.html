@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Analyze pasted text for reading time, sentences, and readability complexity locally.">
+  <title>ReadingTimeAnalyzer | See the shape of your words</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">A clearer view of your draft</p><h1>Reading<span>TimeAnalyzer</span></h1><p class="intro">Paste in an article, note, or draft to see how long it takes to read and how its sentences are shaped.</p></header>
+    <section class="panel" aria-labelledby="analyzer-heading">
+      <div class="panel-heading"><div><p class="section-kicker">Local text analysis</p><h2 id="analyzer-heading">Bring your words</h2></div><span id="word-count" class="summary">0 words</span></div>
+      <label class="input-label" for="text-input">Text to analyze <span>Nothing leaves this browser</span></label>
+      <textarea id="text-input" maxlength="50000" placeholder="Paste your text here…" spellcheck="true"></textarea>
+      <div class="input-footer"><output id="char-count">0 / 50,000 characters</output><button id="sample-button" class="secondary-button" type="button">Use sample</button><button id="clear-button" class="secondary-button" type="button">Clear</button></div>
+      <p id="status" class="status" role="status" aria-live="polite">Start typing to see your reading profile.</p>
+      <div class="metrics" aria-label="Reading analysis results"><article class="metric featured"><span>Reading time</span><strong id="reading-time">—</strong><small>at 200 words per minute</small></article><article class="metric"><span>Sentences</span><strong id="sentence-count">0</strong><small>detected</small></article><article class="metric"><span>Readability</span><strong id="reading-score">—</strong><small id="reading-label">Flesch score</small></article><article class="metric"><span>Complexity</span><strong id="grade-score">—</strong><small>estimated grade</small></article></div>
+      <div class="breakdown"><h3>At a glance</h3><dl><div><dt>Paragraphs</dt><dd id="paragraph-count">0</dd></div><div><dt>Average sentence</dt><dd id="average-sentence">—</dd></div><div><dt>Characters</dt><dd id="plain-char-count">0</dd></div></dl></div>
+    </section>
+  </main>
+  <footer class="site-footer"><p>Analysis is an estimate based on English-language text.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

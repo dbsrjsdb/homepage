@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Build CSS Grid layouts visually and copy generated CSS locally.">
+  <title>GridPlayground | Give the page a shape</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">A small room for structure</p><h1>Grid<span>Playground</span></h1><p class="intro">Change tracks, gaps, and alignment in real time. See the boxes settle into place, then copy the CSS that describes the layout.</p></header>
+    <section class="panel" aria-labelledby="playground-heading"><div class="panel-heading"><div><p class="section-kicker">Local layout editor</p><h2 id="playground-heading">Give the page a shape</h2></div><span id="summary" class="summary">3 × 3 · 9 items</span></div>
+      <div class="workspace"><div class="preview"><div id="grid-preview" class="grid-preview" aria-label="CSS Grid preview"></div><p class="preview-note">Preview container</p></div><div class="controls"><label>Items <output id="item-value">9</output><input id="items" type="range" min="2" max="16" value="9"></label><label>Columns <output id="column-value">3</output><input id="columns" type="range" min="1" max="6" value="3"></label><label>Rows <output id="row-value">3</output><input id="rows" type="range" min="1" max="5" value="3"></label><label>Gap <output id="gap-value">12px</output><input id="gap" type="range" min="0" max="40" value="12"></label><label>Justify items<select id="justify"><option>stretch</option><option>start</option><option>center</option><option>end</option></select></label><label>Align items<select id="align"><option>stretch</option><option>start</option><option>center</option><option>end</option></select></label></div></div>
+      <div class="output"><code id="css-output">display: grid;</code><button id="copy" type="button">Copy CSS</button></div><p id="status" class="status" role="status" aria-live="polite">Adjust a control to explore the layout.</p><button id="reset" class="secondary-button reset" type="button">Reset defaults</button>
+    </section>
+  </main>
+  <footer class="site-footer"><p>CSS output is generated locally in your browser.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

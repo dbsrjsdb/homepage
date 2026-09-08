@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Decode JWT headers and payloads locally and inspect expiration claims.">
+  <title>JWTInspector | Read the claims</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">A closer look at a token</p><h1>JWT<span>Inspector</span></h1><p class="intro">Decode a JSON Web Token in your browser, inspect its claims, and see what its timing fields say. No token leaves this page.</p></header>
+    <section class="panel" aria-labelledby="inspector-heading"><div class="panel-heading"><div><p class="section-kicker">Local token reader</p><h2 id="inspector-heading">Read the claims</h2></div><span class="badge">No signature verification</span></div>
+      <label class="input-label" for="token-input">JWT token <span>Paste only what you are comfortable inspecting</span></label><textarea id="token-input" spellcheck="false" placeholder="eyJhbGciOi..." autocomplete="off"></textarea><div class="actions"><button id="decode" type="button">Decode locally</button><button id="sample" class="secondary-button" type="button">Use sample</button><button id="clear" class="secondary-button" type="button">Clear</button></div><p id="status" class="status" role="status" aria-live="polite">Header and payload will appear here.</p>
+      <div class="claims"><article><div class="card-heading"><h3>Header</h3><button class="copy" data-copy="header" type="button">Copy</button></div><pre id="header-output">—</pre></article><article><div class="card-heading"><h3>Payload</h3><button class="copy" data-copy="payload" type="button">Copy</button></div><pre id="payload-output">—</pre></article></div>
+      <div class="timing"><h3>Timing check</h3><p id="timing-output">No expiration claim inspected yet.</p></div>
+    </section>
+  </main>
+  <footer class="site-footer"><p>Decoding is local. This tool does not validate signatures.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

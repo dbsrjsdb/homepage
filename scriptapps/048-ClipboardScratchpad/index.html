@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Keep temporary snippets searchable and local in your browser.">
+  <title>ClipboardScratchpad | Keep a thought handy</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">A little shelf for loose text</p><h1>Clipboard<span>Scratchpad</span></h1><p class="intro">Save snippets temporarily, pin the ones you need close, and find them again without sending anything to a server.</p></header>
+    <section class="panel" aria-labelledby="pad-heading">
+      <div class="panel-heading"><div><p class="section-kicker">Local notes</p><h2 id="pad-heading">What are you holding?</h2></div><span id="count" class="summary">0 snippets</span></div>
+      <form id="snippet-form" class="composer"><label for="snippet-input">New snippet <span>Paste text or type a quick note</span></label><textarea id="snippet-input" maxlength="5000" placeholder="Paste a URL, command, quote, or reminder…" required></textarea><div class="compose-actions"><output id="char-count">0 / 5000</output><button type="submit">Save snippet</button></div></form>
+      <div class="toolbar"><label class="search"><span>Search snippets</span><input id="search-input" type="search" placeholder="Filter by text…"></label><button id="clear-button" class="secondary-button" type="button">Clear all</button></div>
+      <p id="status" class="status" role="status" aria-live="polite">Your snippets stay in this browser.</p>
+      <div id="snippet-list" class="snippet-list" aria-live="polite"></div>
+    </section>
+  </main>
+  <footer class="site-footer"><p>Stored locally with browser storage. Nothing is uploaded.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

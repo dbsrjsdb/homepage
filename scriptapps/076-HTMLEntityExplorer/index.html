@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Search common HTML entities and copy their Unicode and HTML representations.">
+  <title>HTMLEntityExplorer | Find the right character code</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero">
+      <p class="eyebrow">Tiny characters, useful details</p>
+      <h1>HTML<span>Entity Explorer</span></h1>
+      <p class="intro">Search a compact reference of useful characters, inspect their Unicode and HTML forms, and copy the representation you need.</p>
+    </header>
+
+    <section class="panel search-panel" aria-labelledby="search-heading">
+      <div class="panel-heading"><div><p class="section-kicker">Character index</p><h2 id="search-heading">Find an entity</h2></div><span class="badge">Runs locally</span></div>
+      <div class="search-row"><label class="search-field">Search by name, character, or code<input id="search" type="search" placeholder="Try ampersand, arrow, or U+00A9" autocomplete="off"></label><label>Category<select id="category"><option value="all">All categories</option><option value="punctuation">Punctuation</option><option value="symbols">Symbols</option><option value="arrows">Arrows</option><option value="math">Math</option><option value="currency">Currency</option></select></label></div>
+      <p id="result-count" class="status" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="panel results" aria-labelledby="results-heading">
+      <div class="panel-heading"><div><p class="section-kicker">Reference cards</p><h2 id="results-heading">Common characters</h2></div><button id="reset" class="secondary-button" type="button">Reset search</button></div>
+      <div id="list" class="entity-grid"></div>
+      <div id="empty" class="empty" hidden><span class="empty-mark">?</span><p>No matching entities.</p><small>Try a character, category, or shorter search.</small></div>
+    </section>
+  </main>
+  <footer class="site-footer"><p>Reference values are generated in the browser; no text is sent anywhere.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

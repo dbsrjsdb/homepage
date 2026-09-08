@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Generate strong random passwords with character controls, memorable mode, and entropy estimates.">
+  <title>PasswordGenerator | Make a stronger secret</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero">
+      <p class="eyebrow">Private by design</p>
+      <h1>Password<span>Generator</span></h1>
+      <p class="intro">Create a random password locally, tune its character set, or switch to a memorable passphrase.</p>
+    </header>
+    <section class="panel" aria-labelledby="generator-heading">
+      <div class="panel-heading"><div><p class="section-kicker">Make a secret</p><h2 id="generator-heading">Password recipe</h2></div><span class="summary">No data leaves this browser</span></div>
+      <div class="output-card">
+        <label for="password-output">Generated password</label>
+        <div class="output-row"><output id="password-output" aria-live="polite">—</output><button id="copy-button" class="secondary-button" type="button">Copy</button></div>
+        <div class="strength-row"><div class="meter" aria-hidden="true"><span id="strength-bar"></span></div><span id="strength-label">—</span></div>
+      </div>
+      <div class="settings">
+        <label class="range-label" for="length-input">Length <output id="length-value">20</output><input id="length-input" type="range" min="8" max="64" value="20"></label>
+        <label class="toggle"><input id="memorable-input" type="checkbox"><span>Memorable mode</span><small>Use easy-to-read words with a number</small></label>
+        <fieldset id="charset-options"><legend>Character sets</legend><label><input class="charset" type="checkbox" data-set="lower" checked> Lowercase <code>a-z</code></label><label><input class="charset" type="checkbox" data-set="upper" checked> Uppercase <code>A-Z</code></label><label><input class="charset" type="checkbox" data-set="numbers" checked> Numbers <code>0-9</code></label><label><input class="charset" type="checkbox" data-set="symbols" checked> Symbols <code>!@#$</code></label></fieldset>
+      </div>
+      <button id="generate-button" class="generate-button" type="button">Generate password</button>
+      <p id="status" class="status" role="status" aria-live="polite">Ready to generate a password.</p>
+      <div class="details"><span>Estimated entropy</span><strong id="entropy-output">—</strong><span>Character pool</span><strong id="pool-output">—</strong></div>
+    </section>
+  </main>
+  <footer class="site-footer"><p>Generated locally with the Web Crypto API. Never reuse an important password.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

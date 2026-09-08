@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Design cubic Bézier CSS easing curves and preview animations locally.">
+  <title>CSSEasingPlayground | Shape the motion</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">A little studio for motion</p><h1>CSS<span>EasingPlayground</span></h1><p class="intro">Shape a cubic Bézier curve, watch it move, and take the exact CSS timing function with you.</p></header>
+    <section class="panel" aria-labelledby="playground-heading"><div class="panel-heading"><div><p class="section-kicker">Local motion editor</p><h2 id="playground-heading">Shape the motion</h2></div><code id="summary">cubic-bezier(.25, .1, .25, 1)</code></div>
+      <div class="playground"><div class="curve-card"><svg id="curve" viewBox="0 0 100 100" role="img" aria-label="Cubic Bézier easing curve"><line id="handle-one"/><line id="handle-two"/><path id="curve-path"/><circle id="point-one" r="4"/><circle id="point-two" r="4"/></svg><div class="axis"><span>start</span><span>end</span></div></div><div class="controls"><div class="presets"><span>Presets</span><button data-preset="ease">Ease</button><button data-preset="linear">Linear</button><button data-preset="spring">Springy</button></div><div class="sliders"><label>x1 <output id="x1-value">.25</output><input id="x1" type="range" min="0" max="1" step=".01" value=".25"></label><label>y1 <output id="y1-value">.1</output><input id="y1" type="range" min="-1" max="2" step=".01" value=".1"></label><label>x2 <output id="x2-value">.25</output><input id="x2" type="range" min="0" max="1" step=".01" value=".25"></label><label>y2 <output id="y2-value">1</output><input id="y2" type="range" min="-1" max="2" step=".01" value="1"></label></div></div></div>
+      <div class="preview"><div class="preview-heading"><h3>Preview</h3><button id="replay" class="secondary-button" type="button">Replay</button></div><div id="stage" class="stage"><span id="ball"></span></div></div><div class="output"><code id="css-output">transition-timing-function: cubic-bezier(.25, .1, .25, 1);</code><button id="copy" type="button">Copy CSS</button></div><p id="status" class="status" role="status" aria-live="polite">Adjust a control to reshape the motion.</p>
+    </section>
+  </main>
+  <footer class="site-footer"><p>Everything updates locally in your browser.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

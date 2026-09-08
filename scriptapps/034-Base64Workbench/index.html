@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Encode and decode text or files with Base64 locally in your browser.">
+  <title>Base64Workbench | Move bytes thoughtfully</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">Bytes, translated</p><h1>Base64<span>Workbench</span></h1><p class="intro">Encode text and files to Base64, decode them back, and keep the whole round trip inside this browser.</p></header>
+    <section class="panel" aria-labelledby="base64-heading">
+      <div class="panel-heading"><div><p class="section-kicker">Local conversion</p><h2 id="base64-heading">Choose a direction</h2></div><span class="summary">Nothing is uploaded</span></div>
+      <div class="mode-row" role="group" aria-label="Conversion direction"><button class="mode active" data-mode="encode" type="button" aria-pressed="true">Encode → Base64</button><button class="mode" data-mode="decode" type="button" aria-pressed="false">Decode ← Base64</button></div>
+      <div class="source-row"><label for="source-mode">Source<select id="source-mode"><option value="text">Text</option><option value="file">File or image</option></select></label><label id="file-label" class="file-label" for="file-input" hidden>Choose file<input id="file-input" type="file"></label></div>
+      <label for="input-text" id="input-label" class="text-label"><span id="input-label-text">Text input</span><textarea id="input-text" spellcheck="false" placeholder="Type or paste text here…">Hello, Base64 👋</textarea></label>
+      <div class="actions"><button id="convert-button" type="button">Encode text</button><button id="copy-button" class="secondary-button" type="button">Copy output</button><button id="download-button" class="secondary-button" type="button">Download bytes</button><button id="clear-button" class="secondary-button" type="button">Clear</button></div>
+      <p id="status" class="status" role="status" aria-live="polite">Ready to encode.</p>
+      <label for="output-text" class="text-label">Output<textarea id="output-text" readonly spellcheck="false" aria-live="polite" placeholder="Your result will appear here…"></textarea></label>
+      <div class="details"><span id="input-size">Input: 0 bytes</span><span id="output-size">Output: 0 bytes</span></div>
+    </section>
+  </main>
+  <footer class="site-footer"><p>Base64 conversion runs entirely in this browser.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

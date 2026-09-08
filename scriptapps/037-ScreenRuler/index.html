@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Measure on-screen objects with a calibratable browser ruler.">
+  <title>ScreenRuler | Measure what you see</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">A useful edge</p><h1>Screen<span>Ruler</span></h1><p class="intro">Measure an on-screen object with a simple browser ruler, then calibrate it against a known reference for real-world units.</p></header>
+    <section class="panel" aria-labelledby="ruler-heading">
+      <div class="panel-heading"><div><p class="section-kicker">Local measuring tool</p><h2 id="ruler-heading">Set your measurement</h2></div><span id="screen-info" class="summary"></span></div>
+      <div class="measure-controls"><label for="pixel-input">Screen pixels<input id="pixel-input" type="number" min="1" max="1200" value="240"></label><label for="unit-select">Display unit<select id="unit-select"><option value="px">Pixels</option><option value="in">Inches</option><option value="cm">Centimeters</option><option value="mm">Millimeters</option></select></label><label for="orientation-select">Orientation<select id="orientation-select"><option value="horizontal">Horizontal</option><option value="vertical">Vertical</option></select></label></div>
+      <div class="ruler-stage"><div id="ruler" class="ruler horizontal" role="img" aria-label="Screen ruler measurement"><div class="ruler-fill"></div><div id="ticks" class="ticks"></div></div></div>
+      <div class="reading"><span>Measured length</span><strong id="reading-output">240 px</strong></div>
+      <div class="calibration"><div class="subheading"><h3>Calibration</h3><span>Optional but recommended</span></div><p class="help">Measure a known reference on your screen, then enter both lengths to improve real-world estimates.</p><div class="calibration-controls"><label for="reference-pixels">Reference screen pixels<input id="reference-pixels" type="number" min="1" value="96"></label><label for="reference-real">Reference real length<input id="reference-real" type="number" min="0.01" step="any" value="1"></label><label for="reference-unit">Reference unit<select id="reference-unit"><option value="in">inches</option><option value="cm">centimeters</option><option value="mm">millimeters</option></select></label></div><button id="reset-calibration" class="secondary-button" type="button">Reset to 96 px/in</button></div>
+      <p id="status" class="status" role="status" aria-live="polite">Ready to measure.</p>
+    </section>
+  </main>
+  <footer class="site-footer"><p>For best accuracy, calibrate against a physical reference.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

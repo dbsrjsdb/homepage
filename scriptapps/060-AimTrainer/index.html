@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Click appearing targets locally and track reaction and accuracy statistics.">
+  <title>AimTrainer | Find the mark</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">A small practice field</p><h1>Aim<span>Trainer</span></h1><p class="intro">Click each target as it appears, stay precise, and get a clearer sense of your reaction speed.</p></header>
+    <section class="panel" aria-labelledby="trainer-heading"><div class="panel-heading"><div><p class="section-kicker">Local target practice</p><h2 id="trainer-heading">Find the mark</h2></div><div class="stats"><span>Targets <strong id="targets">0/20</strong></span><span>Accuracy <strong id="accuracy">100%</strong></span><span>Avg <strong id="average">—</strong></span></div></div>
+      <div id="game-area" class="game-area" role="application" aria-label="Aim trainer field"><button id="target" class="target" type="button" aria-label="Target"></button><span id="field-message">Press Start to begin.</span></div><p id="status" class="status" role="status" aria-live="polite">Twenty targets per round. Misses count toward accuracy.</p>
+      <div class="actions"><button id="start-button" type="button">Start round</button><button id="reset-button" class="secondary-button" type="button">Reset stats</button></div>
+      <div class="results"><div><span>Best average</span><strong id="best">—</strong></div><div><span>Hits</span><strong id="hits">0</strong></div><div><span>Misses</span><strong id="misses">0</strong></div></div>
+    </section>
+  </main>
+  <footer class="site-footer"><p>Scores are kept locally in this browser.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

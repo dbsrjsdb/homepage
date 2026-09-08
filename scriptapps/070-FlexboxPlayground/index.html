@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Manipulate flexbox properties visually and copy the generated CSS locally.">
+  <title>FlexboxPlayground | Arrange with intention</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">A small room for layout experiments</p><h1>Flexbox<span>Playground</span></h1><p class="intro">Change one flex property at a time, see how the boxes respond, and copy a clean CSS rule when the arrangement feels right.</p></header>
+    <section class="panel" aria-labelledby="playground-heading"><div class="panel-heading"><div><p class="section-kicker">Local layout editor</p><h2 id="playground-heading">Arrange with intention</h2></div><span id="summary" class="summary">6 items · row</span></div>
+      <div class="workspace"><div class="preview"><div id="flex-preview" class="flex-preview" aria-label="Flexbox preview"></div><p class="preview-note">Preview container</p></div><div class="controls"><label>Items <output id="item-value">6</output><input id="items" type="range" min="2" max="12" value="6"></label><label>Direction<select id="direction"><option>row</option><option>row-reverse</option><option>column</option><option>column-reverse</option></select></label><label>Wrap<select id="wrap"><option>nowrap</option><option>wrap</option><option>wrap-reverse</option></select></label><label>Justify content<select id="justify"><option>flex-start</option><option>center</option><option>flex-end</option><option>space-between</option><option>space-around</option><option>space-evenly</option></select></label><label>Align items<select id="align"><option>stretch</option><option>flex-start</option><option>center</option><option>flex-end</option><option>baseline</option></select></label><label>Gap <output id="gap-value">12px</output><input id="gap" type="range" min="0" max="40" value="12"></label></div></div>
+      <div class="output"><code id="css-output">display: flex;</code><button id="copy" type="button">Copy CSS</button></div><p id="status" class="status" role="status" aria-live="polite">Adjust a control to explore the layout.</p><button id="reset" class="secondary-button reset" type="button">Reset defaults</button>
+    </section>
+  </main>
+  <footer class="site-footer"><p>CSS output is generated locally in your browser.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

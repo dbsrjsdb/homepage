@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Create small pixel art with a grid canvas, palette, fill, and eyedropper tools." />
+    <title>PixelArtEditor | Draw locally</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="hero">
+        <p class="eyebrow">Tiny canvas, big ideas</p>
+        <h1>Pixel<span>ArtEditor</span></h1>
+        <p class="intro">Draw on a small grid with a custom palette, fill areas, pick colors, and export a crisp PNG.</p>
+      </header>
+
+      <div class="workspace">
+        <section class="panel controls-panel" aria-labelledby="controls-heading">
+          <h2 id="controls-heading">Tools</h2>
+          <label for="grid-size">Grid size</label>
+          <select id="grid-size">
+            <option value="8">8 × 8</option>
+            <option value="16" selected>16 × 16</option>
+            <option value="24">24 × 24</option>
+            <option value="32">32 × 32</option>
+          </select>
+          <div class="tool-grid" role="group" aria-label="Drawing tools">
+            <button class="tool active" data-tool="pencil" type="button" aria-pressed="true">✎ Pencil</button>
+            <button class="tool" data-tool="eraser" type="button" aria-pressed="false">⌫ Eraser</button>
+            <button class="tool" data-tool="fill" type="button" aria-pressed="false">▧ Fill</button>
+            <button class="tool" data-tool="eyedropper" type="button" aria-pressed="false">⌕ Pick color</button>
+          </div>
+          <label for="color-input">Custom color</label>
+          <div class="color-row"><input id="color-input" type="color" value="#e85d75" /><output id="color-value">#E85D75</output></div>
+          <p class="status" id="status" role="status" aria-live="polite">Ready to draw.</p>
+          <div class="actions"><button id="clear-button" class="secondary-button" type="button">Clear grid</button><button id="download-button" type="button">Export PNG</button></div>
+        </section>
+
+        <section class="panel canvas-panel" aria-labelledby="canvas-heading">
+          <div class="panel-heading"><h2 id="canvas-heading">Canvas</h2><span id="grid-summary" class="summary">16 × 16</span></div>
+          <div class="canvas-wrap"><canvas id="pixel-canvas" tabindex="0" role="grid" aria-label="Pixel art drawing canvas"></canvas></div>
+          <p class="hint">Click or drag across cells to draw. Keyboard focus is supported for the canvas.</p>
+        </section>
+
+        <section class="panel palette-panel" aria-labelledby="palette-heading">
+          <h2 id="palette-heading">Palette</h2>
+          <div id="palette" class="palette" role="group" aria-label="Color palette"></div>
+          <p class="hint">Choose a color, or use Pick color on any painted cell.</p>
+        </section>
+      </div>
+    </main>
+    <footer class="site-footer"><p>Pixel art is drawn entirely in this browser.</p></footer>
+    <script src="script.js"></script>
+  </body>
+</html>

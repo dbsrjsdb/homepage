@@ -6,15 +6,19 @@ export function AppPage({
   title,
   description,
   children,
+  backHref = '/',
+  backLabel = 'Home',
 }: {
   title: string;
   description: string;
   children: ReactNode;
+  backHref?: string;
+  backLabel?: string;
 }) {
   return (
     <main id="main-content" className="page app-page">
-      <Link className="back-link" href="/#projects">
-        <ArrowLeft size={16} /> All projects
+      <Link className="back-link" href={backHref}>
+        <ArrowLeft size={16} /> {backLabel}
       </Link>
       <div className="app-heading">
         <span className="eyebrow">THE WORKSPACE</span>

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Organize tasks on a local drag-and-drop Kanban board persisted in your browser.">
+  <title>KanbanBoard | Make work visible</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">Less in your head</p><h1>Kanban<span>Board</span></h1><p class="intro">Capture the next task, move cards through a calm three-column flow, and pick up where you left off later.</p></header>
+    <section class="panel" aria-labelledby="board-heading">
+      <div class="panel-heading"><div><p class="section-kicker">Local task board</p><h2 id="board-heading">Today’s flow</h2></div><span id="task-count" class="summary">0 tasks</span></div>
+      <form id="task-form" class="task-form"><label for="task-input">New task<input id="task-input" maxlength="120" autocomplete="off" placeholder="What needs doing?"></label><button type="submit">Add task</button></form>
+      <p id="status" class="status" role="status" aria-live="polite">Tasks stay in this browser.</p>
+      <div id="board" class="board" aria-label="Kanban columns"></div>
+      <div class="board-actions"><button id="clear-button" class="secondary-button" type="button">Clear board</button><button id="reset-button" class="secondary-button" type="button">Restore sample</button></div>
+    </section>
+  </main>
+  <footer class="site-footer"><p>Board state is saved locally with localStorage.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

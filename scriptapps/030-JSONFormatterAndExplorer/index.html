@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Validate, format, minify, and explore JSON locally in a collapsible tree.">
+  <title>JSONFormatterAndExplorer | Make data legible</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">Data, without the fog</p><h1>JSON<span>Formatter</span></h1><p class="intro">Validate JSON, make it readable, shrink it for transport, and explore nested data in a collapsible tree.</p></header>
+    <section class="panel" aria-labelledby="json-heading">
+      <div class="panel-heading"><div><p class="section-kicker">Local data utility</p><h2 id="json-heading">JSON workspace</h2></div><span class="summary">Nothing is uploaded</span></div>
+      <label for="json-input" class="editor-label">JSON input<textarea id="json-input" spellcheck="false" aria-describedby="help-text"></textarea></label>
+      <div class="actions"><button id="validate-button" type="button">Validate</button><button id="prettify-button" type="button">Prettify</button><button id="minify-button" type="button">Minify</button><button id="copy-button" class="secondary-button" type="button">Copy output</button><button id="clear-button" class="secondary-button" type="button">Clear</button></div>
+      <p id="help-text" class="help">Paste an object or array. Formatting and exploration happen only in this browser.</p><p id="status" class="status" role="status" aria-live="polite">Ready to validate.</p>
+      <div class="workspace"><div class="formatted"><div class="subheading"><h3>Formatted output</h3><span id="size-output">0 characters</span></div><pre id="formatted-output" aria-live="polite">—</pre></div><div class="tree-panel"><div class="subheading"><h3>Explorer</h3><div class="tree-actions"><button id="expand-button" class="tiny-button" type="button">Expand</button><button id="collapse-button" class="tiny-button" type="button">Collapse</button></div></div><div id="tree-output" class="tree-output" aria-live="polite">Validate JSON to explore it.</div></div></div>
+    </section>
+  </main>
+  <footer class="site-footer"><p>Powered by the browser's native JSON parser.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

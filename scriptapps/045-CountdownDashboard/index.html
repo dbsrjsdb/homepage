@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Track multiple upcoming events with beautiful local countdown cards.">
+  <title>CountdownDashboard | Make the wait visible</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">A little anticipation</p><h1>Countdown<span>Dashboard</span></h1><p class="intro">Keep the moments you are looking forward to in one calm view, with live countdowns that stay private in this browser.</p></header>
+    <section class="panel" aria-labelledby="countdown-heading">
+      <div class="panel-heading"><div><p class="section-kicker">Local event board</p><h2 id="countdown-heading">What’s ahead?</h2></div><span id="event-count" class="summary">0 events</span></div>
+      <form id="event-form" class="event-form"><label for="event-name">Event name<input id="event-name" maxlength="50" placeholder="Launch day" autocomplete="off"></label><label for="event-date">Date and time<input id="event-date" type="datetime-local"></label><button type="submit">Add countdown</button></form>
+      <p id="status" class="status" role="status" aria-live="polite">Add an event to begin counting down.</p>
+      <div id="events" class="events" aria-live="polite"></div>
+      <div class="board-actions"><button id="clear-button" class="secondary-button" type="button">Clear all</button><button id="reset-button" class="secondary-button" type="button">Restore sample</button></div>
+    </section>
+  </main>
+  <footer class="site-footer"><p>Countdowns use your browser’s local time zone and local storage.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

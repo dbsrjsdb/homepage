@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Spawn particles and interact with gravity and attraction in a local Canvas playground.">
+  <title>ParticlePlayground | Drop a little motion into the page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">Motion you can reach into</p><h1>Particle<span>Playground</span></h1><p class="intro">Click or drag to spawn a small burst of particles, then watch gravity and pointer attraction pull the system into motion.</p></header>
+    <section class="workspace">
+      <section class="panel controls" aria-labelledby="controls-heading"><div class="panel-heading"><div><p class="section-kicker">Physics controls</p><h2 id="controls-heading">Set the forces</h2></div><span class="badge">Canvas physics</span></div>
+        <label class="field">Gravity <output id="gravity-value">35%</output><input id="gravity" type="range" min="0" max="100" value="35"></label>
+        <label class="field">Pointer attraction <output id="attraction-value">55%</output><input id="attraction" type="range" min="0" max="100" value="55"></label>
+        <label class="field">Particle palette<select id="palette"><option value="citrus">Citrus glow</option><option value="ice">Ice bloom</option><option value="candy">Candy night</option><option value="mono">Silver dust</option></select></label>
+        <div class="button-row"><button id="burst" type="button">Add a burst</button><button id="clear" class="secondary-button" type="button">Clear field</button></div>
+        <p id="status" class="status" role="status" aria-live="polite">Click the field to add particles.</p><div class="hint-row"><span class="hint-dot"></span><span>Pointer is an attractor</span></div>
+      </section>
+      <section class="panel canvas-panel" aria-labelledby="canvas-heading"><div class="panel-heading"><div><p class="section-kicker">Live simulation</p><h2 id="canvas-heading">Make a little weather</h2></div><span id="count" class="badge">0 particles</span></div><div class="canvas-wrap"><canvas id="canvas" width="820" height="560" tabindex="0" aria-label="Interactive particle simulation. Click to spawn particles."></canvas><div class="canvas-label">Click · drag · release</div></div></section>
+    </section>
+  </main>
+  <footer class="site-footer"><p>Particles are simulated locally and disappear when you clear the field.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

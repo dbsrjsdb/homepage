@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Connect every node exactly once in a local one-line puzzle.">
+  <title>OneLinePuzzle | Keep the line moving</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">A small exercise in continuity</p><h1>OneLine<span>Puzzle</span></h1><p class="intro">Connect every node exactly once without lifting your pointer. Find the route, keep the line unbroken, and finish in one clean gesture.</p></header>
+    <section class="panel" aria-labelledby="puzzle-heading"><div class="panel-heading"><div><p class="section-kicker">Local gesture puzzle</p><h2 id="puzzle-heading">Keep the line moving</h2></div><div class="stats"><span>Level <strong id="level">1/3</strong></span><span>Nodes <strong id="progress">0/8</strong></span></div></div>
+      <div class="settings"><label>Puzzle<select id="puzzle-select"><option value="0">The bend · 8 nodes</option><option value="1">The loop · 10 nodes</option><option value="2">The zigzag · 12 nodes</option></select></label><button id="new-puzzle" type="button">New puzzle</button></div><p id="status" class="status" role="status" aria-live="polite">Start at the glowing node, then drag through the route.</p><svg id="puzzle" class="puzzle" viewBox="0 0 600 400" role="img" aria-label="One line connect-the-nodes puzzle"></svg>
+      <div class="actions"><button id="reset" class="secondary-button" type="button">Reset line</button><button id="hint" type="button">Show next node</button></div><p class="hint">Press and drag from the glowing start node through each node in order.</p><div class="completion"><span>Completed puzzles</span><strong id="completed">0</strong></div>
+    </section>
+  </main>
+  <footer class="site-footer"><p>Progress is kept locally in this browser.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

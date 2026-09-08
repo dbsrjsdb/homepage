@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Test regular expressions locally with flags, highlighted matches, and capture details.">
+  <title>RegexPlayground | Make patterns visible</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">Patterns, made visible</p><h1>Regex<span>Playground</span></h1><p class="intro">Write a regular expression, test it against sample text, and see every match highlighted in real time.</p></header>
+    <section class="panel" aria-labelledby="regex-heading">
+      <div class="panel-heading"><div><p class="section-kicker">Local pattern tester</p><h2 id="regex-heading">Try a pattern</h2></div><span class="summary">No text is uploaded</span></div>
+      <div class="pattern-row"><label for="pattern-input">Pattern<input id="pattern-input" value="\b(cat|dog)\b" spellcheck="false" autocomplete="off"></label><label for="flags-input">Flags<input id="flags-input" value="gi" spellcheck="false" autocomplete="off" aria-describedby="flags-help"></label></div><p id="flags-help" class="help">Common flags: g global · i ignore case · m multiline · s dot matches newlines · u unicode</p>
+      <label for="test-input" class="test-label">Test text<textarea id="test-input" spellcheck="false">A cat and a DOG became friends. The cat learned a trick.</textarea></label>
+      <div class="actions"><button id="test-button" type="button">Test pattern</button><button id="example-button" class="secondary-button" type="button">Load example</button><button id="clear-button" class="secondary-button" type="button">Clear</button></div>
+      <p id="status" class="status" role="status" aria-live="polite">Ready to test.</p>
+      <div class="results"><div class="result-heading"><h3>Highlighted matches</h3><span id="match-count">0 matches</span></div><div id="highlight-output" class="highlight-output" aria-live="polite">Run the pattern to see matches.</div></div>
+      <div class="match-details"><h3>Match details</h3><div id="details-output" class="details-output">No matches yet.</div></div>
+    </section>
+  </main>
+  <footer class="site-footer"><p>Regular expressions use your browser's built-in JavaScript engine.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

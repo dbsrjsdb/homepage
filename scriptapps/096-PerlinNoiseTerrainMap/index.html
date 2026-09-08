@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Generate seeded topographic terrain maps with local layered noise.">
+  <title>PerlinNoiseTerrainMap | Read the shape of a landscape</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">Landscape in a field of numbers</p><h1>Perlin Noise<span>Terrain Map</span></h1><p class="intro">Choose a seed, layer smooth noise, and turn the resulting elevations into a topographic landscape you can read at a glance.</p></header>
+    <section class="panel controls" aria-labelledby="controls-heading"><div class="panel-heading"><div><p class="section-kicker">Terrain settings</p><h2 id="controls-heading">Shape the elevation</h2></div><span class="badge">Seeded noise</span></div><div class="control-row"><button id="generate" type="button">Generate map</button><button id="random" class="secondary-button" type="button">Random seed</button><button id="download" class="secondary-button" type="button">Save PNG</button><label>Seed<input id="seed" value="ridge-42" maxlength="24" autocomplete="off"></label><label>Scale <output id="scale-value">42</output><input id="scale" type="range" min="18" max="90" value="42"></label><label>Detail <output id="detail-value">4 layers</output><input id="detail" type="range" min="1" max="6" value="4"></label><label>Palette<select id="palette"><option value="topo">Topographic</option><option value="desert">Desert contour</option><option value="deep">Deep ocean</option><option value="mono">Ink map</option></select></label><label class="check"><input id="contours" type="checkbox" checked> Show contour lines</label></div><p id="status" class="status" role="status" aria-live="polite">Ready to generate a terrain map.</p></section>
+    <section class="panel map-panel" aria-labelledby="map-heading"><div class="panel-heading"><div><p class="section-kicker">Generated landscape</p><h2 id="map-heading">Read the terrain</h2></div><span id="map-label" class="badge">ridge-42</span></div><div class="canvas-wrap"><canvas id="canvas" width="840" height="560" aria-label="Generated topographic terrain map"></canvas><div class="canvas-label">Lower · higher · peak</div></div><div class="legend"><span class="legend-item"><i class="low"></i>Low</span><span class="legend-item"><i class="mid"></i>Mid</span><span class="legend-item"><i class="high"></i>High</span><span id="resolution">210 × 140 samples</span></div></section>
+  </main>
+  <footer class="site-footer"><p>Terrain values are generated locally from the selected seed and settings.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

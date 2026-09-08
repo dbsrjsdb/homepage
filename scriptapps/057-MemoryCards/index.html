@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Play a local animated memory matching game with generated symbols.">
+  <title>MemoryCards | Keep a little in mind</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero"><p class="eyebrow">A gentle test of attention</p><h1>Memory<span>Cards</span></h1><p class="intro">Turn over two cards at a time, find every matching symbol, and keep the board in your head.</p></header>
+    <section class="panel" aria-labelledby="game-heading"><div class="panel-heading"><div><p class="section-kicker">Local matching game</p><h2 id="game-heading">Find the pairs</h2></div><div class="stats"><span>Moves <strong id="moves">0</strong></span><span>Time <strong id="time">0s</strong></span><span>Pairs <strong id="pairs">0</strong></span></div></div>
+      <div class="settings"><label>Board size<select id="difficulty"><option value="8">Easy · 8 cards</option><option value="12">Medium · 12 cards</option><option value="16">Hard · 16 cards</option></select></label><button id="new-game" type="button">New game</button></div><p id="status" class="status" role="status" aria-live="polite">Choose a card to begin.</p><div id="board" class="board" role="grid" aria-label="Memory card board"></div>
+      <p class="hint">Choose two cards. A match stays open.</p><div class="best"><span>Best moves</span><strong id="best">—</strong></div>
+    </section>
+  </main>
+  <footer class="site-footer"><p>Best scores are saved locally in this browser.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

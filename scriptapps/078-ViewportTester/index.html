@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Preview an HTML snippet at simulated device viewport dimensions.">
+  <title>ViewportTester | See the layout at every size</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero">
+      <p class="eyebrow">A quick look between breakpoints</p>
+      <h1>Viewport<span>Tester</span></h1>
+      <p class="intro">Paste a small HTML snippet, pick a simulated device size, and see how the markup behaves without leaving your browser.</p>
+    </header>
+
+    <section class="panel editor" aria-labelledby="editor-heading">
+      <div class="panel-heading"><div><p class="section-kicker">Local preview</p><h2 id="editor-heading">Bring your markup</h2></div><span class="badge">Sandboxed iframe</span></div>
+      <label class="snippet-label" for="snippet">HTML snippet <span>Scripts are disabled in preview</span></label>
+      <textarea id="snippet" spellcheck="false"><article style="font-family:system-ui;padding:24px;background:#15211b;color:#d9ffe9;border-radius:16px"><p style="color:#8fe0ba;font-weight:700;letter-spacing:.12em;text-transform:uppercase">A tiny responsive card</p><h1 style="font-size:clamp(1.8rem,8vw,4rem);margin:10px 0">Design for the space you have.</h1><p style="line-height:1.6;color:#a7b9ae">Resize the viewport and see this content reflow naturally.</p><button style="padding:10px 14px;border:0;border-radius:99px;background:#9be4c0;color:#102019">Explore</button></article></textarea>
+      <p id="status" class="status" role="status" aria-live="polite">Preview updates as you edit the snippet.</p>
+    </section>
+
+    <section class="panel tester" aria-labelledby="tester-heading">
+      <div class="panel-heading"><div><p class="section-kicker">Simulated devices</p><h2 id="tester-heading">Choose a viewport</h2></div><span id="size-label" class="badge">375 × 667 px</span></div>
+      <div id="presets" class="preset-row" role="group" aria-label="Viewport presets"><button type="button" data-width="375" data-height="667" class="preset active">Phone <small>375 × 667</small></button><button type="button" data-width="768" data-height="1024" class="preset">Tablet <small>768 × 1024</small></button><button type="button" data-width="1440" data-height="900" class="preset">Desktop <small>1440 × 900</small></button></div>
+      <div class="custom-row"><label>Width <input id="width" type="number" min="240" max="1920" value="375"></label><span>×</span><label>Height <input id="height" type="number" min="320" max="1200" value="667"></label><button id="apply" type="button">Apply custom size</button></div>
+      <div class="preview-shell"><div class="preview-meta"><span>Live frame</span><span id="breakpoint">Mobile layout</span></div><div class="frame-wrap"><iframe id="preview" title="HTML snippet viewport preview" sandbox=""></iframe></div></div>
+    </section>
+  </main>
+  <footer class="site-footer"><p>Preview markup stays in this page and runs without scripts inside a sandboxed frame.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
